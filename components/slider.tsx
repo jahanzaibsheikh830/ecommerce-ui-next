@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { slidesData } from "../helperData/slider.helper";
 import SliderItem from "./sliderItem";
+import OwlCarousel from "react-owl-carousel2";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import sliderItem from "./sliderItem";
 export default function Slider() {
-  const [state, setState] = useState(0);
-  const sliderButton = slidesData.length
-  console.log(sliderButton)
   return (
     <div>
       <div>
-        <SliderItem slideData={slidesData[0]} />
-        {/* {
-            sliderButton.map(sliderItem => <button>helper</button>)
-        } */}
+        <OwlCarousel options={{ items: 1, nav: true, margin: 25 }}>
+          {slidesData.map((val, index) => {
+            return <SliderItem slideData={val} key={index} />;
+          })}
+        </OwlCarousel>
       </div>
     </div>
   );

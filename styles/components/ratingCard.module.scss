@@ -1,0 +1,41 @@
+.ratingCard {
+  //   background-color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  margin: 20px 0;
+  .ratingCardImg {
+    text-align: center;
+  }
+  .filledRating {
+    color: #faaf00;
+  }
+  span {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .ratings {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    word-spacing: 10px;
+  }
+  .title {
+    p {
+      margin-bottom: 4px;
+      margin-top: 0px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+  }
+  .price {
+    p {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #d23f57;
+    }
+  }
+}

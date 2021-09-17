@@ -59,12 +59,12 @@ export default function Header() {
                 <AiOutlineSearch size={20} className={styles.searchIcon} />
               </div>
               <div>
-                <input type='search' placeholder='Searching for' />
+                <input type='text' placeholder='Searching for' />
               </div>
               <div>
-                <button>
-                  All Categories <IoIosArrowDown className={styles.arrowIcon} />{" "}
-                </button>
+                <select>
+                  <option>All Categories</option>
+                </select>
               </div>
             </div>
             <div className={styles.carts}>
@@ -86,10 +86,13 @@ export default function Header() {
                 <HiTemplate size={22} />
               </div>
               <div className={styles.category}>
-                <div> <p>Categories</p></div>
+                <div>
+                  {" "}
+                  <p>Categories</p>
+                </div>
               </div>
               <div>
-                <IoIosArrowForward className={styles.categoryIcon}/>
+                <IoIosArrowForward className={styles.categoryIcon} />
               </div>
             </div>
             <div className={styles.nav}>

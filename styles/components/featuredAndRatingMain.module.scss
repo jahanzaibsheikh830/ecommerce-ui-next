@@ -1,0 +1,6 @@
+.featuredAndRatingMain {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 25px;
+  padding: 80px 0 40px 0;
+}

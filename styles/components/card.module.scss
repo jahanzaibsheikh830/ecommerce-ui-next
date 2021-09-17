@@ -1,0 +1,73 @@
+.cardContainer {
+  .card {
+    background-color: #fff;
+    padding: 8px 20px 15px 8px;
+    flex-direction: columns;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #f3efef;
+    .cardContentHeader {
+      display: flex;
+      justify-content: space-between;
+      // height: 50px;
+      position: relative;
+      .cardContentHeaderIcon {
+        display: none;
+        position: absolute;
+        left: 230px;
+        z-index: 111;
+      }
+      .eyeIcon {
+        color: #0f3460;
+        display: block;
+        margin-bottom: 13px;
+      }
+      .heartIcon {
+        color: #0f3460;
+      }
+    }
+    .cardContentImg {
+      display: flex;
+      justify-content: center;
+    }
+    .cardBottomContent {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-left: 10px;
+      h3 {
+        font-size: 14px;
+        color: #373f50;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .stars {
+        margin-bottom: 5px;
+      }
+      .filledRating {
+        color: #faaf00;
+      }
+      .outlineRating {
+        color: rgba(0, 0, 0, 0.26);
+      }
+      .addToCartBtn {
+        display: flex;
+        align-items: flex-end;
+      }
+      .price {
+        padding-right: 8px;
+        font-weight: 600;
+        color: #d23f57;
+      }
+      .cutPrice {
+        color: #7d879c;
+        font-weight: 600;
+        text-decoration: line-through;
+      }
+    }
+  }
+  .card:hover {
+    .cardContentHeaderIcon {
+      display: block;
+    }
+  }
+}

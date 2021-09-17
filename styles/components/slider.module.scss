@@ -1,10 +1,29 @@
-.sliderMain{
-    display: flex;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    img{
-        height: 400px;
-        width: 400px;
+.sliderMain {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  img {
+    height: 400px;
+    width: 400px;
+  }
+  .sliderContent {
+    width: 50%;
+    h2 {
+      font-size: 50px;
+      margin-top: 0;
+      margin-bottom: 1.35rem;
+      line-height: 1.2;
+      color: #2b3445;
     }
+    p {
+      margin-bottom: 21.6px;
+      margin-top: 0px;
+      font-size: 14px;
+      line-height: 25px;
+      color: #0f3460;
+      text-transform: none;
+      white-space: normal;
+    }
+  }
 }

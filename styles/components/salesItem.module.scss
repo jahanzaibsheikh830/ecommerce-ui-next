@@ -1,0 +1,44 @@
+.main {
+  background-color: #f6f9fc;
+  padding: 60px 0;
+  .salesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .salesHeading {
+      display: flex;
+      align-items: center;
+      .salesIcon {
+        color: #d23f57;
+        margin-top: 6px;
+        margin-right: 5px;
+      }
+      h2 {
+        font-size: 25px;
+        color: #2b3445;
+      }
+    }
+    .detailsPara {
+      display: flex;
+      align-items: center;
+      color: #7d879c;
+      font-size: 15px;
+      .detailsIcon {
+        margin-top: 10px;
+      }
+    }
+  }
+  .salesCard {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    // gap: 25px;
+    margin-top: 20px;
+    .owl-carousel {
+      .owl-nav {
+        .owl-next {
+          background-color: #d23f57 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.categoryCardMain {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  .categoryProduct {
+    position: relative;
+    background-color: black;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    .categoryProductBtn {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px 0 10px;
+    }
+  }
+}
+.categoryCardMain:hover {
+  .categoryProduct::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0.4;
+    border-radius: 8px;
+  }
+}
