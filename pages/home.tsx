@@ -6,6 +6,8 @@ import SaleItem from "../components/flashSalesItem";
 import CategoryCard from "../components/categoryCardItem";
 import FeaturedAndRatingMain from "../components/featuredAndRatingMain";
 import ArrivalCard from "../components/arivalItem";
+import DiscountCard from "../components/discountCardItem";
+import CarsMain from "../components/carsMain";
 export default function Home() {
   return (
     <div>
@@ -20,6 +22,8 @@ export default function Home() {
       <CategoryCard />
       <FeaturedAndRatingMain />
       <ArrivalCard />
+      <DiscountCard />
+      <CarsMain />
     </div>
   );
 }

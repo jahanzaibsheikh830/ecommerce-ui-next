@@ -3,11 +3,15 @@ import styles from "../styles/components/featuredCard.module.scss";
 import Image from "next/image";
 interface FeaturedCardProps {
   featuredData: object;
+  discount?: string;
 }
-export default function FeaturedCard({ featuredData }: FeaturedCardProps) {
+export default function FeaturedCard({
+  featuredData,
+  discount,
+}: FeaturedCardProps) {
   return (
     <div>
-      <div>
+      <div className={discount ? styles.dicountMainCard : styles.mainCard}>
         <div>
           <Image
             className={styles.image}
@@ -21,7 +25,11 @@ export default function FeaturedCard({ featuredData }: FeaturedCardProps) {
           <h4>{featuredData.name}</h4>
         </div>
         <div className={styles.price}>
-          <p>{featuredData.price}</p>
+          <span>{featuredData.price}</span>
+
+          {discount && (
+            <span className={styles.cutPrice}>{featuredData.price}</span>
+          )}
         </div>
       </div>
     </div>
