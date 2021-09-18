@@ -8,6 +8,13 @@ import FeaturedAndRatingMain from "../components/featuredAndRatingMain";
 import ArrivalCard from "../components/arivalItem";
 import DiscountCard from "../components/discountCardItem";
 import CarsMain from "../components/carsMain";
+import PhonesMain from "../components/phonesMain";
+import Banner from "../components/banner";
+import OpticsMain from "../components/opticsMain";
+import AllCategoryCard from "../components/allCategoryCardItem";
+import MoreData from "../components/moreItem";
+import ServiceCard from "../components/serviceCard";
+import Footer from "../components/footer";
 export default function Home() {
   return (
     <div>
@@ -24,6 +31,13 @@ export default function Home() {
       <ArrivalCard />
       <DiscountCard />
       <CarsMain />
+      <PhonesMain />
+      <Banner />
+      <OpticsMain />
+      <AllCategoryCard />
+      <MoreData />
+      <ServiceCard />
+      <Footer />
     </div>
   );
 }

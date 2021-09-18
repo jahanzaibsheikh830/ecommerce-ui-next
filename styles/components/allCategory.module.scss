@@ -1,0 +1,21 @@
+.categoryMain {
+  background-color: #fff;
+  color: #2b3445;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 250ms ease-in-out;
+  box-shadow: 0px 1px 3px #e2e1f0;
+  h4 {
+    font-weight: 600;
+    margin-left: 10px;
+    color: #2b3445;
+    margin-bottom: 7px;
+  }
+}
+.categoryMain:hover {
+  box-shadow: 0 0 25px #e2e1f0;
+  cursor: pointer;
+}
