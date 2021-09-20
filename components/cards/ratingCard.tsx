@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles//components/ratingCard.module.scss";
+import styles from "../../styles//components/ratingCard.module.scss";
 import { AiFillStar, AiOutlineStar } from "react-icons/Ai";
 import Image from "next/image";
 interface ratingDataProps {

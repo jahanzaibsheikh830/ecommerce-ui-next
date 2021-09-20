@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/components/card.module.scss";
-import Button from "./button";
+import styles from "../../styles/components/card.module.scss";
+import Button from "../button";
 import {
   AiFillEye,
   AiOutlineHeart,

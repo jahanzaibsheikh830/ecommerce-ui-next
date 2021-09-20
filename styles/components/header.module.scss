@@ -26,6 +26,11 @@
     .contactHeaderRight > * {
       margin-right: 35px;
       font-size: 12px;
+      cursor: pointer;
+      .hover:hover {
+        color: #d23f57;
+        transition: 0.5s;
+      }
     }
   }
 }
@@ -51,7 +56,7 @@
         outline: none;
         border: none;
         padding: 0px 0 0 5px;
-        width: 550px;
+        width: 500px;
         max-width: 100%;
       }
       input::placeholder {
@@ -61,17 +66,55 @@
       .searchIcon {
         margin-top: 5px;
       }
-      select {
-        border: none;
-        background: #f6f9fc;
-        height: 42px;
-        border-top-right-radius: 1200px;
-        border-bottom-right-radius: 1200px;
-        border-left: 1px solid #b5b6b7;
-        color: #4b566b;
-        font-size: 14px;
-        // padding: 0 10px 0 25px;
-        font-weight: 400;
+      .searchList {
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        button {
+          border: none;
+          background: #f6f9fc;
+          height: 42px;
+          border-top-right-radius: 1200px;
+          border-bottom-right-radius: 1200px;
+          border-left: 1px solid #b5b6b7;
+          color: #4b566b;
+          font-size: 14px;
+          padding: 0 25px 0 25px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+        ul {
+          position: absolute;
+          top: 102px;
+          background: #fff;
+          list-style: none;
+          margin: 0px;
+          outline: 0px;
+          border-radius: 4px;
+          box-shadow: 0 0 10px #adadad;
+          overflow: hidden auto;
+          z-index: 111;
+          animation: fadein 0.4s;
+          li {
+            padding: 8px 15px;
+            font-size: 14px;
+            color: #727883;
+            cursor: pointer;
+            font-weight: 500;
+            line-height: 1.5;
+          }
+          li:first-child {
+            margin-top: 10px;
+          }
+          li:hover {
+            background-color: #f5f5f5;
+          }
+        }
       }
     }
     .carts {
@@ -116,7 +159,7 @@
         p {
           margin-bottom: 0px;
           margin-top: 0px;
-          font-size: 14px;
+          font-size: 15px;
           font-weight: 600;
           text-align: left;
           color: #7d879c;

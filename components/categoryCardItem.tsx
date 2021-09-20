@@ -1,32 +1,22 @@
 import React, { useState } from "react";
 import { CategoryCardData } from "../helperData/catergoryItem.helper";
-import CategoryCard from "./categoryCard";
+import CategoryCard from "./cards/categoryCard";
 import Container from "./container";
 import { IoMdArrowDropright } from "react-icons/Io";
-import { HiTemplate } from "react-icons/Hi";
+import { BsFillGridFill } from "react-icons/Bs";
 import styles from "../styles/components/categoryCardItem.module.scss";
+import ProductHeader from "./productHeader";
 export default function CategoryCardItem() {
   return (
     <div className={styles.categoryCardMain}>
       <Container>
-        <div className={styles.salesHeader}>
-          <div className={styles.salesHeading}>
-            <div>
-              <HiTemplate className={styles.salesIcon} size={25} />
-            </div>
-            <div>
-              <h2> Top Categories</h2>
-            </div>
-          </div>
-          <div className={styles.detailsPara}>
-            <div>
-              <p>View all</p>
-            </div>
-            <div>
-              <IoMdArrowDropright className={styles.detailsIcon} size={20} />
-            </div>
-          </div>
-        </div>
+        <ProductHeader
+          title='Top Categories'
+          TitleIcon={BsFillGridFill}
+          linkTitle='View all'
+          color='#d23f57 '
+          LinkIcon={IoMdArrowDropright}
+        />
         <div className={styles.categoryCard}>
           {CategoryCardData.map((val, index) => {
             return (

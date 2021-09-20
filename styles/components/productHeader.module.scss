@@ -1,0 +1,26 @@
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  .productHeading {
+    display: flex;
+    align-items: center;
+    .productIcon {
+      margin-top: 6px;
+      margin-right: 5px;
+    }
+    h2 {
+      font-size: 25px;
+      color: #2b3445;
+    }
+  }
+  .linkTitle {
+    display: flex;
+    color: #7d879c;
+    font-size: 15px;
+    .LinkIcon {
+      margin-top: 10px;
+    }
+  }
+}

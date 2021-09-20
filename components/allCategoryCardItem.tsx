@@ -2,31 +2,21 @@ import React from "react";
 import Container from "./container";
 import { allcategoriesData } from "../helperData/allCategories.helper";
 import { IoMdArrowDropright } from "react-icons/Io";
-import { HiTemplate } from "react-icons/Hi";
+import { BsFillGridFill } from "react-icons/Bs";
 import styles from "../styles/components/allCategoryItem.module.scss";
-import AllCategoryCard from "./allCategoryCard";
-export default function ArivalItem() {
+import AllCategoryCard from "./cards/allCategoryCard";
+import ProductHeader from "./productHeader";
+export default function AllCategoryCardItem() {
   return (
     <div className={styles.main}>
       <Container>
-        <div className={styles.salesHeader}>
-          <div className={styles.salesHeading}>
-            <div>
-              <HiTemplate className={styles.salesIcon} size={25} />
-            </div>
-            <div>
-              <h2>Categories</h2>
-            </div>
-          </div>
-          <div className={styles.detailsPara}>
-            <div>
-              <p>View all</p>
-            </div>
-            <div>
-              <IoMdArrowDropright className={styles.detailsIcon} size={20} />
-            </div>
-          </div>
-        </div>
+        <ProductHeader
+          title='Categories'
+          linkTitle='View all'
+          LinkIcon={IoMdArrowDropright}
+          color='#D23F57'
+          TitleIcon={BsFillGridFill}
+        />
         <div className={styles.categoryCardMain}>
           {allcategoriesData.map((val, ind) => {
             return <AllCategoryCard categoryData={val} key={ind} />;

@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/components/categoryCard.module.scss";
-import Button from "./button";
+import styles from "../../styles/components/categoryCard.module.scss";
+import Button from "../button";
 interface CategoriesData {
   cardData?: object;
 }
 export default function CategoryCard({ cardData }: CategoriesData) {
-  console.log("cardData", cardData);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.categoryCardMain}>

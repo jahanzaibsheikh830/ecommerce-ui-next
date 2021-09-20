@@ -5,7 +5,7 @@ interface buttonProps {
   text?: string;
   type?: string;
 }
-export default function button({ text, type }: buttonProps) {
+export default function Button({ text, type }: buttonProps) {
   return (
     <div>
       <button

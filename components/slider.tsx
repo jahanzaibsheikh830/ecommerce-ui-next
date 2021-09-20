@@ -3,7 +3,6 @@ import { slidesData } from "../helperData/slider.helper";
 import SliderItem from "./sliderItem";
 import OwlCarousel from "react-owl-carousel2";
 import "owl.carousel/dist/assets/owl.carousel.css";
-import sliderItem from "./sliderItem";
 export default function Slider() {
   return (
     <div>

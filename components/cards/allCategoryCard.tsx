@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/components/allCategory.module.scss";
+import styles from "../../styles/components/allCategory.module.scss";
 interface CategoryProps {
   categoryData?: object;
 }

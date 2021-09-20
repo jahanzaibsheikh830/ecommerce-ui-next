@@ -1,34 +1,6 @@
 .main {
   background-color: #f6f9fc;
   padding-bottom: 50px;
-  .salesHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    .salesHeading {
-      display: flex;
-      align-items: center;
-      .salesIcon {
-        color: rgb(210, 63, 87);
-        margin-top: 6px;
-        margin-right: 5px;
-      }
-      h2 {
-        font-size: 25px;
-        color: #2b3445;
-      }
-    }
-    .detailsPara {
-      display: flex;
-      align-items: center;
-      color: #7d879c;
-      font-size: 15px;
-      .detailsIcon {
-        margin-top: 10px;
-      }
-    }
-  }
   .discountCardMain {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));

@@ -1,32 +1,4 @@
 .Main {
-  .salesHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    .salesHeading {
-      display: flex;
-      align-items: center;
-      .salesIcon {
-        color: rgb(255, 145, 1);
-        margin-top: 6px;
-        margin-right: 5px;
-      }
-      h2 {
-        font-size: 25px;
-        color: #2b3445;
-      }
-    }
-    .detailsPara {
-      display: flex;
-      align-items: center;
-      color: #7d879c;
-      font-size: 15px;
-      .detailsIcon {
-        margin-top: 10px;
-      }
-    }
-  }
   .featuresMain {
     background-color: #fff;
     padding: 20px 20px;

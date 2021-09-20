@@ -3,34 +3,6 @@
   padding-bottom: 80px;
   .carsMain {
     display: flex;
-    .salesHeader {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      .salesHeading {
-        display: flex;
-        align-items: center;
-        .salesIcon {
-          color: #d23f57;
-          margin-top: 6px;
-          margin-right: 5px;
-        }
-        h2 {
-          font-size: 25px;
-          color: #2b3445;
-        }
-      }
-      .detailsPara {
-        display: flex;
-        align-items: center;
-        color: #7d879c;
-        font-size: 15px;
-        .detailsIcon {
-          margin-top: 10px;
-        }
-      }
-    }
     .carsCardMain {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

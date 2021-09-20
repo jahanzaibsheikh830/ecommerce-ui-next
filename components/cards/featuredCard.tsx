@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/components/featuredCard.module.scss";
+import styles from "../../styles/components/featuredCard.module.scss";
 import Image from "next/image";
 interface FeaturedCardProps {
   featuredData: object;

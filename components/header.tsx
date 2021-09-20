@@ -1,15 +1,17 @@
+import React, { useState } from "react";
 import styles from "../styles/components/header.module.scss";
 import Container from "./container";
 import { RiPhoneLine } from "react-icons/Ri";
 import { AiOutlineMail } from "react-icons/Ai";
 import { AiOutlineSearch, AiOutlineShopping } from "react-icons/Ai";
-
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/Io";
+import { MdKeyboardArrowDown } from "react-icons/Md";
 import { FaRegUser } from "react-icons/Fa";
-import { HiTemplate } from "react-icons/Hi";
+import { BsFillGridFill } from "react-icons/Bs";
 import Logo from "../assests/logo.svg";
 import Image from "next/image";
 export default function Header() {
+  const [state, setState] = useState<boolean>(false);
   return (
     <div>
       <div className={styles.mainHeader}>
@@ -33,10 +35,10 @@ export default function Header() {
             </div>
             <div className={styles.contactHeaderRight}>
               <div>
-                <p>Theme FAQ"s</p>
+                <p className={styles.hover}>Theme FAQ"s</p>
               </div>
               <div>
-                <p>Need Help?</p>
+                <p className={styles.hover}>Need Help?</p>
               </div>
               <div>
                 <p>EN</p>
@@ -61,10 +63,23 @@ export default function Header() {
               <div>
                 <input type='text' placeholder='Searching for' />
               </div>
-              <div>
-                <select>
-                  <option>All Categories</option>
-                </select>
+              <div className={styles.searchList}>
+                <button type='button' onClick={() => setState((prev) => !prev)}>
+                  All Categories
+                  <MdKeyboardArrowDown className={styles.arrow} size={17} />
+                </button>
+                <div style={{ display: `${state ? "block" : "none"}` }}>
+                  <ul>
+                    <li>All Categories</li>
+                    <li>Cars</li>
+                    <li>Clothes</li>
+                    <li>Electronics</li>
+                    <li>laptop</li>
+                    <li>Desktop</li>
+                    <li>Camera</li>
+                    <li>Toys</li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className={styles.carts}>
@@ -83,11 +98,10 @@ export default function Header() {
           <div className={styles.navBarMain}>
             <div className={styles.categoryMain}>
               <div>
-                <HiTemplate size={22} />
+                <BsFillGridFill size={17} />
               </div>
               <div className={styles.category}>
                 <div>
-                  {" "}
                   <p>Categories</p>
                 </div>
               </div>

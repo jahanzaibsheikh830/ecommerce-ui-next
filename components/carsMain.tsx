@@ -5,7 +5,8 @@ import styles from "../styles/components/carsMain.module.scss";
 import { GiElectric } from "react-icons/Gi";
 import { IoMdArrowDropright } from "react-icons/Io";
 import { carsCardData } from "../helperData/carsCardItem.helper";
-import Card from "./card";
+import Card from "./cards/card";
+import ProductHeader from "./productHeader";
 export default function CarsMain() {
   return (
     <div className={styles.mainContainer}>
@@ -15,24 +16,11 @@ export default function CarsMain() {
             <SideBar cars />
           </div>
           <div className={styles.cars}>
-            <div className={styles.salesHeader}>
-              <div className={styles.salesHeading}>
-                <div>
-                  <h2>Cars</h2>
-                </div>
-              </div>
-              <div className={styles.detailsPara}>
-                <div>
-                  <p>View all</p>
-                </div>
-                <div>
-                  <IoMdArrowDropright
-                    className={styles.detailsIcon}
-                    size={20}
-                  />
-                </div>
-              </div>
-            </div>
+            <ProductHeader
+              title='Cars'
+              linkTitle='View all'
+              LinkIcon={IoMdArrowDropright}
+            />
             <div className={styles.carsCardMain}>
               {carsCardData.map((val, ind) => {
                 return <Card salesData={val} key={ind} />;

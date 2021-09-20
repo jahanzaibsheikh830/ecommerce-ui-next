@@ -13,7 +13,7 @@ import Banner from "../components/banner";
 import OpticsMain from "../components/opticsMain";
 import AllCategoryCard from "../components/allCategoryCardItem";
 import MoreData from "../components/moreItem";
-import ServiceCard from "../components/serviceCard";
+import ServiceCard from "../components/cards/serviceCard";
 import Footer from "../components/footer";
 export default function Home() {
   return (
