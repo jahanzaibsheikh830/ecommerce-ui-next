@@ -1,10 +1,11 @@
 import React from "react";
 import Container from "./container";
 import { allcategoriesData } from "../helperData/allCategories.helper";
-import { IoMdArrowDropright } from "react-icons/Io";
+import { IoMdArrowDropright } from "react-icons/io";
 import { BsFillGridFill } from "react-icons/Bs";
 import styles from "../styles/components/allCategoryItem.module.scss";
 import AllCategoryCard from "./cards/allCategoryCard";
+
 import ProductHeader from "./productHeader";
 export default function AllCategoryCardItem() {
   return (
