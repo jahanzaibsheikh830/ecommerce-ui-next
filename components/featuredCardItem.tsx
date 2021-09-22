@@ -1,7 +1,8 @@
 import React from "react";
 import { featuredData } from "../helperData/featuredData.helper";
 import styles from "../styles/components/fearturedCardItem.module.scss";
-import { GiSeaStar } from "react-icons/Gi";
+import { GiSeaStar } from "react-icons/gi";
+
 import { IoMdArrowDropright } from "react-icons/io";
 import FeaturedCard from "./cards/featuredCard";
 import ProductHeader from "./productHeader";
