@@ -7,7 +7,7 @@ import {
   AiOutlineHeart,
   AiFillStar,
   AiOutlineStar,
-} from "react-icons/Ai";
+} from "react-icons/ai";
 interface cardProps {
   salesData?: {
     image: any;

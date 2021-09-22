@@ -2,7 +2,7 @@ import React from "react";
 import { DiscountCardData } from "../helperData/discountData.helper";
 import styles from "../styles/components/discountCardItem.module.scss";
 import Container from "./container";
-import { AiOutlineGift } from "react-icons/Ai";
+import { AiOutlineGift } from "react-icons/ai";
 import { IoMdArrowDropright } from "react-icons/io";
 import DiscountCard from "./cards/featuredCard";
 import ProductHeader from "./productHeader";

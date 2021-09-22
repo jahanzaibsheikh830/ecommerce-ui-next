@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../styles//components/ratingCard.module.scss";
-import { AiFillStar, AiOutlineStar } from "react-icons/Ai";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import Image from "next/image";
 interface ratingDataProps {
   ratingData: {

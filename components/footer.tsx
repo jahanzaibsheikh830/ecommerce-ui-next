@@ -11,7 +11,7 @@ import {
   AiOutlineYoutube,
   AiOutlineGoogle,
   AiOutlineInstagram,
-} from "react-icons/Ai";
+} from "react-icons/ai";
 export default function Footer() {
   return (
     <div className={styles.footerMain}>

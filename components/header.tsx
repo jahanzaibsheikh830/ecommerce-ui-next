@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import styles from "../styles/components/header.module.scss";
 import Container from "./container";
 import { RiPhoneLine } from "react-icons/Ri";
-import { AiOutlineMail } from "react-icons/Ai";
-import { AiOutlineSearch, AiOutlineShopping } from "react-icons/Ai";
+import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineShopping } from "react-icons/ai";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
 import Logo from "../assests/logo.svg";
+
 import Image from "next/image";
 export default function Header() {
   const [state, setState] = useState<boolean>(false);
