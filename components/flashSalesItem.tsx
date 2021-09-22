@@ -2,7 +2,7 @@ import React from "react";
 import { salesData } from "../helperData/sale.helper";
 import Card from "./cards/card";
 import Container from "./container";
-import { GiElectric } from "react-icons/Gi";
+import { GiElectric } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
 import styles from "../styles/components/salesItem.module.scss";
 import OwlCarousel from "react-owl-carousel2";

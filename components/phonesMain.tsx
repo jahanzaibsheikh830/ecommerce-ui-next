@@ -2,7 +2,7 @@ import React from "react";
 import SideBar from "./sideBar";
 import Container from "./container";
 import styles from "../styles/components/carsMain.module.scss";
-import { GiElectric } from "react-icons/Gi";
+import { GiElectric } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
 import { phonesCardData } from "../helperData/phoneCardItems.helper";
 import Card from "./cards/card";

@@ -2,10 +2,11 @@ import React from "react";
 import SideBar from "./sideBar";
 import Container from "./container";
 import styles from "../styles/components/carsMain.module.scss";
-import { GiElectric } from "react-icons/Gi";
+import { GiElectric } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
 import { opticsWatchCardData } from "../helperData/opticscardItems.helper";
 import Card from "./cards/card";
+
 import ProductHeader from "./productHeader";
 export default function CarsMain() {
   return (

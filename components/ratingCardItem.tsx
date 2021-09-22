@@ -1,7 +1,7 @@
 import React from "react";
 import { ratingCardData } from "../helperData/ratingItemsData.helper";
 import Container from "./container";
-import { GiStarGate } from "react-icons/Gi";
+import { GiStarGate } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
 import styles from "../styles/components/rating.module.scss";
 import RatingCard from "./cards/ratingCard";
