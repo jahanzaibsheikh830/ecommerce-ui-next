@@ -5,8 +5,8 @@ import logo from "../assests/logo.svg";
 import Image from "next/image";
 import googlePng from "../assests/google.png";
 import appStore from "../assests/appstore.png";
-import { FaFacebookF } from "react-icons/Fa";
-import { CgTwitter } from "react-icons/Cg";
+import { FaFacebookF } from "react-icons/fa";
+import { CgTwitter } from "react-icons/cg";
 import {
   AiOutlineYoutube,
   AiOutlineGoogle,

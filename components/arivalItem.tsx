@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "./container";
 import { arrivalData } from "../helperData/arrivalData.helper";
-import { MdFiberNew } from "react-icons/Md";
-import { IoMdArrowDropright } from "react-icons/Io";
+import { MdFiberNew } from "react-icons/md";
+import { IoMdArrowDropright } from "react-icons/io";
 import styles from "../styles/components/arrivalItems.module.scss";
 import ArrivalCard from "./cards/featuredCard";
 import ProductHeader from "./productHeader";

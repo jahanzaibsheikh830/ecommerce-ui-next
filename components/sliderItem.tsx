@@ -10,6 +10,7 @@ interface slideDataProps {
     image?: StaticImageData;
   };
 }
+
 export default function sliderItem({ slideData }: slideDataProps) {
   console.log("slideData:", slideData);
   return (

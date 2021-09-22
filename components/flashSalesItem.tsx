@@ -3,7 +3,7 @@ import { salesData } from "../helperData/sale.helper";
 import Card from "./cards/card";
 import Container from "./container";
 import { GiElectric } from "react-icons/Gi";
-import { IoMdArrowDropright } from "react-icons/Io";
+import { IoMdArrowDropright } from "react-icons/io";
 import styles from "../styles/components/salesItem.module.scss";
 import OwlCarousel from "react-owl-carousel2";
 import "owl.carousel/dist/assets/owl.carousel.css";

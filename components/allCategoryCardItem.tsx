@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./container";
 import { allcategoriesData } from "../helperData/allCategories.helper";
 import { IoMdArrowDropright } from "react-icons/io";
-import { BsFillGridFill } from "react-icons/Bs";
+import { BsFillGridFill } from "react-icons/bs";
 import styles from "../styles/components/allCategoryItem.module.scss";
 import AllCategoryCard from "./cards/allCategoryCard";
 

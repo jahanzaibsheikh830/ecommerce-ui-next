@@ -4,10 +4,10 @@ import Container from "./container";
 import { RiPhoneLine } from "react-icons/Ri";
 import { AiOutlineMail } from "react-icons/Ai";
 import { AiOutlineSearch, AiOutlineShopping } from "react-icons/Ai";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/Io";
-import { MdKeyboardArrowDown } from "react-icons/Md";
-import { FaRegUser } from "react-icons/Fa";
-import { BsFillGridFill } from "react-icons/Bs";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa";
+import { BsFillGridFill } from "react-icons/bs";
 import Logo from "../assests/logo.svg";
 import Image from "next/image";
 export default function Header() {

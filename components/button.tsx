@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/components/button.module.scss";
-import { GrAdd } from "react-icons/Gr";
+import { GrAdd } from "react-icons/gr";
 interface buttonProps {
   text?: string;
   type?: string;
