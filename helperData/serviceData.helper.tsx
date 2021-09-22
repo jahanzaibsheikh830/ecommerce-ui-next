@@ -1,7 +1,7 @@
-import { FaShippingFast } from "react-icons/Fa";
-import { MdPayment } from "react-icons/Md";
-import { AiOutlineSafety } from "react-icons/Ai";
-import { TiHeadphones } from "react-icons/Ti";
+import { FaShippingFast } from "react-icons/fa";
+import { MdPayment } from "react-icons/md";
+import { AiOutlineSafety } from "react-icons/ai";
+import { TiHeadphones } from "react-icons/ti";
 export const serviceData = [
   {
     title: "Worldwide Delivery",
