@@ -17,6 +17,9 @@ export default function Header() {
       <div className={styles.mainHeader}>
         <Container>
           <div className={styles.contactHeader}>
+            <div className={styles.logoNone}>
+              <Image src={Logo} alt='logo' height='28' />
+            </div>
             <div className={styles.contactHeaderLeft}>
               <div>
                 <div>
@@ -53,15 +56,15 @@ export default function Header() {
       <div className={styles.searchBarMain}>
         <Container>
           <div className={styles.searchBarHeader}>
-            <div>
+            <div className={styles.logoNone}>
               <Image src={Logo} alt='logo' height='28' />
             </div>
             <div className={styles.searchBar}>
-              <div>
+              <div className={styles.searchIconAndInput}>
                 <AiOutlineSearch size={20} className={styles.searchIcon} />
-              </div>
-              <div>
-                <input type='text' placeholder='Searching for' />
+                <div>
+                  <input type='text' placeholder='Searching for' />
+                </div>
               </div>
               <div className={styles.searchList}>
                 <button type='button' onClick={() => setState((prev) => !prev)}>

@@ -1,11 +1,37 @@
 .ratingMain {
   background-color: #f6f9fc;
-
+  padding: 0 15px;
   .ratingCardMain {
     background-color: #fff;
     border-radius: 12px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 0px;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .ratingMain {
+    .ratingCardMain {
+      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+      gap: 30px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .ratingMain {
+    .ratingCardMain {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .ratingMain {
+    .ratingCardMain {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 30px;
+    }
   }
 }

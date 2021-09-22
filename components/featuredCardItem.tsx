@@ -17,7 +17,7 @@ export default function FeaturedCardItem() {
       />
       <div className={styles.featuresMain}>
         {featuredData.map((val, ind) => {
-          return <FeaturedCard featuredData={val} key={ind} />;
+          return <FeaturedCard featuredData={val} key={ind} featured />;
         })}
       </div>
     </div>

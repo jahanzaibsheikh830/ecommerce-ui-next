@@ -3,7 +3,11 @@ import Image from "next/image";
 import styles from "../../styles/components/categoryCard.module.scss";
 import Button from "../button";
 interface CategoriesData {
-  cardData?: object;
+  cardData?: {
+    image?: any;
+    name?: string;
+    status?: string;
+  };
 }
 export default function CategoryCard({ cardData }: CategoriesData) {
   return (
@@ -12,15 +16,15 @@ export default function CategoryCard({ cardData }: CategoriesData) {
         <div
           className={styles.categoryProduct}
           style={{
-            backgroundImage: `url(${cardData.image.src})`,
+            backgroundImage: `url(${cardData?.image.src})`,
           }}
         >
           <div className={styles.categoryProductBtn}>
             <div>
-              <Button text={cardData.name} type={"categoryBtn"} />
+              <Button text={cardData?.name} type={"categoryBtn"} />
             </div>
             <div>
-              <Button text={cardData.status} type={"statusBtn"} />
+              <Button text={cardData?.status} type={"statusBtn"} />
             </div>
           </div>
         </div>

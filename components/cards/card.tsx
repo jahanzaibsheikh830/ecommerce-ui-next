@@ -8,8 +8,14 @@ import {
   AiFillStar,
   AiOutlineStar,
 } from "react-icons/Ai";
-export default function Card({ salesData }: any) {
-  const { image, title, price } = salesData;
+interface cardProps {
+  salesData?: {
+    image: any;
+    title: string;
+    price: number;
+  };
+}
+export default function Card({ salesData }: cardProps) {
   console.log(salesData);
   return (
     <div className={styles.cardContainer}>
@@ -25,16 +31,11 @@ export default function Card({ salesData }: any) {
             </div>
           </div>
           <div className={styles.cardContentImg}>
-            <Image
-              // height={170}
-              // width={170}
-              src={image}
-              alt={"sales product image"}
-            />
+            <Image src={salesData?.image} alt={"sales product image"} />
           </div>
           <div className={styles.cardBottomContent}>
             <div>
-              <h3>{title}</h3>
+              <h3>{salesData?.title}</h3>
               <p className={styles.stars}>
                 <AiFillStar size={20} className={styles.filledRating} />
                 <AiFillStar size={20} className={styles.filledRating} />
@@ -43,7 +44,7 @@ export default function Card({ salesData }: any) {
                 <AiOutlineStar size={20} className={styles.outlineRating} />
               </p>
               <p>
-                <span className={styles.price}>${price}</span>
+                <span className={styles.price}>${salesData?.price}</span>
                 <span className={styles.cutPrice}>350</span>
               </p>
             </div>

@@ -13,7 +13,7 @@ export default function CarsMain() {
       <Container>
         <div className={styles.carsMain}>
           <div>
-            <SideBar cars />
+            <SideBar cars={true} />
           </div>
           <div className={styles.cars}>
             <ProductHeader

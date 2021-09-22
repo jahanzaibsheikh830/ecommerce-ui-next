@@ -6,7 +6,12 @@ import {
 } from "../helperData/CompaniesData";
 import styles from "../styles/components/sideBar.module.scss";
 import Image from "next/image";
-export default function SideBar({ cars, phones, optics }: boolean) {
+interface carsProps {
+  cars?: boolean;
+  phones?: boolean;
+  optics?: boolean;
+}
+export default function SideBar({ cars, phones, optics }: carsProps) {
   return (
     <div>
       <div className={styles.sideBarMain}>

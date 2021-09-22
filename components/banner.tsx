@@ -9,11 +9,11 @@ export default function Banner() {
     <div className={styles.bannerContainer}>
       <Container>
         <div className={styles.bannerMain}>
-          <div>
-            <Image src={banner1} alt='banner' height={320} />
+          <div className={styles.bannerImg1}>
+            <Image src={banner1} alt='banner' height={340} />
           </div>
-          <div>
-            <Image src={banner2} alt='banner' height={320} width={780} />
+          <div className={styles.bannerImg2}>
+            <Image src={banner2} alt='banner' height={340} width={780} />
           </div>
         </div>
       </Container>

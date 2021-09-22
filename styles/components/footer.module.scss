@@ -1,6 +1,6 @@
 .footerMain {
   background-color: #0c0e30;
-  padding: 100px 0;
+  padding: 100px 15px;
   .footerCol4 {
     display: flex;
     .footerCol_1 {
@@ -17,12 +17,14 @@
       }
       .googleAndAppStore {
         display: flex;
+        flex-wrap: wrap;
         // align-items: center;
         // justify-content: space-between;
         .googlePlay {
+          margin-bottom: 10px;
           border-radius: 5px;
           color: white;
-          padding: 0px 16px 0px 0;
+          padding: 5px 16px 5px 0;
           background-color: #0c2a4d;
           display: flex;
           align-items: center;
@@ -85,6 +87,42 @@
           background-color: rgba(0, 0, 0, 0.2);
           font-size: 12px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footerMain {
+    .footerCol4 {
+      flex-wrap: wrap;
+      .footerCol_1,
+      .footerCol_2,
+      .footerCol_3,
+      .footerCol_4 {
+        width: 48%;
+        padding-bottom: 30px;
+      }
+      .footerCol_2 {
+        margin: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footerMain {
+    padding: 100px 15px 50px 15px;
+    .footerCol4 {
+      flex-wrap: wrap;
+      .footerCol_1,
+      .footerCol_2,
+      .footerCol_3,
+      .footerCol_4 {
+        width: 100%;
+        padding-bottom: 30px;
+      }
+      .footerCol_2 {
+        margin: 0;
       }
     }
   }

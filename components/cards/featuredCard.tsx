@@ -2,12 +2,18 @@ import React from "react";
 import styles from "../../styles/components/featuredCard.module.scss";
 import Image from "next/image";
 interface FeaturedCardProps {
-  featuredData: object;
-  discount?: string;
+  featuredData: {
+    image?: any;
+    price?: string;
+    name?: string;
+  };
+  discount?: boolean;
+  featured?: boolean;
 }
 export default function FeaturedCard({
   featuredData,
   discount,
+  featured,
 }: FeaturedCardProps) {
   return (
     <div>

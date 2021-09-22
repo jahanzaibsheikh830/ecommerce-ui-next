@@ -3,7 +3,12 @@ import Container from "./container";
 import styles from "../styles/components/slider.module.scss";
 import Image from "next/image";
 interface slideDataProps {
-  slideData?: object;
+  slideData?: {
+    title?: string;
+    description?: string;
+    button?: any;
+    image?: StaticImageData;
+  };
 }
 export default function sliderItem({ slideData }: slideDataProps) {
   console.log("slideData:", slideData);

@@ -1,4 +1,5 @@
 .Main {
+  margin: 0 15px;
   .featuresMain {
     background-color: #fff;
     padding: 20px 20px;
@@ -6,5 +7,21 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 35px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .Main {
+    width: 50%;
+    .featuresMain {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .Main {
+    width: 100%;
+    .featuresMain {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
   }
 }

@@ -1,7 +1,6 @@
 .serviceCardMain {
   background-color: #f6f9fc;
-  padding-bottom: 70px;
-  padding-top: 10px;
+  padding: 10px 15px 70px 15px;
   .serviceCard {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -43,6 +42,7 @@
         line-height: 1.5;
         text-align: center;
         color: #7d879c;
+        font-size: 14px;
         text-transform: none;
         white-space: normal;
       }
@@ -50,5 +50,26 @@
   }
   .serviceCardContent:hover {
     box-shadow: 0 0 25px #e2e1f0;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .serviceCardMain {
+    .serviceCard {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      .serviceCardContent {
+        padding: 3rem;
+      }
+    }
+  }
+}
+@media screen and(max-width: 600px) {
+  .serviceCardMain {
+    .serviceCard {
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      .serviceCardContent {
+        padding: 3rem;
+      }
+    }
   }
 }

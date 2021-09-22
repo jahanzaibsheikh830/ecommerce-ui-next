@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles//components/ratingCard.module.scss";
 import { AiFillStar, AiOutlineStar } from "react-icons/Ai";
 import Image from "next/image";
 interface ratingDataProps {
-  ratingData: object;
+  ratingData: {
+    ratings: number;
+    title: string;
+    price: number;
+    image: any;
+  };
 }
 export default function RatingCard({ ratingData }: ratingDataProps) {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidth(window?.innerWidth);
+    }
+  }, []);
+  console.log("width: " + width);
   return (
     <div>
       <div className={styles.ratingCard}>
@@ -13,8 +25,10 @@ export default function RatingCard({ ratingData }: ratingDataProps) {
           <Image
             src={ratingData.image}
             alt='rating image'
-            width={110}
-            height={110}
+            width={width > 1200 ? 110 : width > 900 ? 260 : 400}
+            height={width > 1200 ? 110 : width > 900 ? 260 : 400}
+            // width={110}
+            // height={110}
           />
         </div>
         <div className={styles.ratings}>
@@ -23,13 +37,13 @@ export default function RatingCard({ ratingData }: ratingDataProps) {
           <AiFillStar size={18} className={styles.filledRating} />
           <AiFillStar size={18} className={styles.filledRating} />
           <AiFillStar size={18} className={styles.filledRating} />
-          <span>({ratingData.ratings})</span>
+          <span>({ratingData?.ratings})</span>
         </div>
         <div className={styles.title}>
-          <p>{ratingData.title}</p>
+          <p>{ratingData?.title}</p>
         </div>
         <div className={styles.price}>
-          <p>${ratingData.price}</p>
+          <p>${ratingData?.price}</p>
         </div>
       </div>
     </div>

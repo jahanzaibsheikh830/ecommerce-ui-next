@@ -1,8 +1,31 @@
 .bannerContainer {
   background-color: #f6f9fc;
-  padding-bottom: 70px;
+  padding: 0 15px 70px 15px;
   .bannerMain {
     display: flex;
     justify-content: space-between;
+    .bannerImg2 {
+      // margin: 20px;
+      padding-left: 30px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .bannerContainer {
+    .bannerMain {
+      flex-direction: column;
+      .bannerImg1 {
+        :first-child {
+          width: 100%;
+        }
+        margin-bottom: 20px;
+      }
+      .bannerImg2 {
+        padding-left: 0px;
+        :first-child {
+          width: 100%;
+        }
+      }
+    }
   }
 }

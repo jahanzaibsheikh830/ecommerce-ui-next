@@ -1,6 +1,6 @@
 .mainContainer {
   background-color: #f6f9fc;
-  padding-bottom: 80px;
+  padding: 0 15px 80px 15px;
   .carsMain {
     display: flex;
     .carsCardMain {
@@ -10,6 +10,34 @@
     }
     .cars {
       width: 950px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mainContainer {
+    .carsMain {
+      .carsCardMain {
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      }
+    }
+  }
+}
+@media screen and (max-width: 945px) {
+  .mainContainer {
+    .carsMain {
+      .carsCardMain {
+        grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+      }
+    }
+  }
+}
+@media screen and (max-width: 630px) {
+  .mainContainer {
+    .carsMain {
+      .carsCardMain {
+        grid-template-columns: repeat(auto-fill, minmax(273px, 1fr));
+      }
     }
   }
 }
