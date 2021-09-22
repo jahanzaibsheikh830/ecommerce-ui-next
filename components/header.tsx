@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/components/header.module.scss";
 import Container from "./container";
-import { RiPhoneLine } from "react-icons/Ri";
+import { RiPhoneLine } from "react-icons/ri";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineSearch, AiOutlineShopping } from "react-icons/ai";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
