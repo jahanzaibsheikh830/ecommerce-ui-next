@@ -39,7 +39,7 @@ export default function Header() {
             </div>
             <div className={styles.contactHeaderRight}>
               <div>
-                <p className={styles.hover}>Theme FAQ"s</p>
+                <p className={styles.hover}>Theme FAQ&quot;s</p>
               </div>
               <div>
                 <p className={styles.hover}>Need Help?</p>
