@@ -5,8 +5,8 @@ import Container from "./container";
 import { GiElectric } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
 import styles from "../styles/components/salesItem.module.scss";
-import OwlCarousel from "react-owl-carousel2";
-import "owl.carousel/dist/assets/owl.carousel.css";
+// import OwlCarousel from "react-owl-carousel2";
+// import "owl.carousel/dist/assets/owl.carousel.css";
 import ProductHeader from "./productHeader";
 export default function salesItem() {
   return (
@@ -20,15 +20,15 @@ export default function salesItem() {
           LinkIcon={IoMdArrowDropright}
         />
         <div className={`${styles.salesCard} "owl-carousel"`}>
-          <OwlCarousel options={{ items: 4, nav: true, margin: 25 }}>
-            {salesData.map((val, i) => {
-              return (
-                <div key={i}>
-                  <Card salesData={val} />
-                </div>
-              );
-            })}
-          </OwlCarousel>
+          {/* <OwlCarousel options={{ items: 4, nav: true, margin: 25 }}> */}
+          {salesData.map((val, i) => {
+            return (
+              <div key={i}>
+                <Card salesData={val} />
+              </div>
+            );
+          })}
+          {/* </OwlCarousel> */}
         </div>
       </Container>
     </div>
