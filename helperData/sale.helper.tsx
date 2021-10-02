@@ -24,9 +24,9 @@ export const salesData = [
     title: "50% Off For Your First Shopping",
     price: 250,
   },
-  {
-    image: mobile,
-    title: "50% Off For Your First Shopping",
-    price: 250,
-  },
+  // {
+  //   image: mobile,
+  //   title: "50% Off For Your First Shopping",
+  //   price: 250,
+  // },
 ];

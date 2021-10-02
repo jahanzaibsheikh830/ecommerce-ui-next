@@ -19,7 +19,7 @@
 }
 @media screen and (max-width: 900px) {
   .Main {
-    width: 100%;
+    width: auto;
     .featuresMain {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }

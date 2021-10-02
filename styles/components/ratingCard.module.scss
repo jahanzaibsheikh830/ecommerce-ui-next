@@ -6,6 +6,11 @@
   .ratingCardImg {
     text-align: center;
   }
+  .ratingCardImg:hover {
+    filter: opacity(1.5) drop-shadow(0 0 0 black);
+    transition: 0.5s;
+    cursor: pointer;
+  }
   .filledRating {
     color: #faaf00;
   }

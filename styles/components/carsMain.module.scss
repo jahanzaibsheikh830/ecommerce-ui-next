@@ -41,3 +41,12 @@
     }
   }
 }
+@media screen and (max-width: 350px) {
+  .mainContainer {
+    .carsMain {
+      .carsCardMain {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+    }
+  }
+}

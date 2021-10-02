@@ -17,3 +17,10 @@
     }
   }
 }
+@media screen and (max-width: 350px) {
+  .main {
+    .salesCard {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+}

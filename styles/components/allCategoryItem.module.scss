@@ -21,3 +21,11 @@
     }
   }
 }
+
+@media screen and (max-width: 350px) {
+  .main {
+    .categoryCardMain {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+}

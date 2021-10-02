@@ -6,4 +6,10 @@
   @media screen and (max-width: 1200px) {
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   }
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  @media screen and (max-width: 400px) {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
 }

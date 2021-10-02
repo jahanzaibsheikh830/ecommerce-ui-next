@@ -18,9 +18,8 @@ export default function FeaturedCard({
   return (
     <div>
       <div className={discount ? styles.dicountMainCard : styles.mainCard}>
-        <div>
+        <div className={styles.image}>
           <Image
-            className={styles.image}
             src={featuredData.image}
             alt='featued image'
             width={featuredData.price ? 300 : 280}
