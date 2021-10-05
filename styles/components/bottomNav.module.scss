@@ -16,12 +16,30 @@
       color: #515d60;
       font-size: 14px;
     }
+    .cartQuantity {
+      background-color: #d23f57;
+      height: 20px;
+      border-radius: 50%;
+      width: 20px;
+      padding: 0 6px;
+      position: fixed;
+      bottom: 4%;
+      left: 63%;
+      span {
+        color: #fff;
+      }
+    }
   }
   .col4:hover {
     :first-child,
     p {
       color: #d23f57;
       transition: 0.5s;
+    }
+    .cartQuantity {
+      span {
+        color: #fff;
+      }
     }
   }
   @media screen and (max-width: 900px) {

@@ -33,6 +33,9 @@ export default function BottomNav() {
           <div>
             <p>Cart</p>
           </div>
+          <div className={styles.cartQuantity}>
+            <span>1</span>
+          </div>
         </div>
         <div className={styles.col4}>
           <div>
