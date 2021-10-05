@@ -15,6 +15,13 @@ export default function SideBar({ cars, phones, optics }: carsProps) {
   return (
     <div>
       <div className={styles.sideBarMain}>
+        {phonesCompaniesData && opticsAndWatchCompaniesData && (
+          <div className={styles.sideBarheader}>
+            <p className={styles.brand}>Brands</p>
+            <p className={styles.border}>|</p>
+            <p className={styles.shop}>Shops</p>
+          </div>
+        )}
         {cars ? (
           <>
             {carCompaniesData &&

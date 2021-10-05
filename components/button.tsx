@@ -4,8 +4,9 @@ import { GrAdd } from "react-icons/gr";
 interface buttonProps {
   text?: string;
   type?: string;
+  color?: string;
 }
-export default function Button({ text, type }: buttonProps) {
+export default function Button({ text, type, color }: buttonProps) {
   return (
     <div>
       <button
@@ -21,7 +22,11 @@ export default function Button({ text, type }: buttonProps) {
             : styles.salesBtn
         }
       >
-        {text == "add" ? <GrAdd size={12} className={styles.addBtn} /> : text}
+        {text == "add" ? (
+          <GrAdd size={12} className={styles.addBtn} color={"#d23f57"} />
+        ) : (
+          text
+        )}
       </button>
     </div>
   );

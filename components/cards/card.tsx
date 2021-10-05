@@ -49,7 +49,7 @@ export default function Card({ salesData }: cardProps) {
               </p>
             </div>
             <div className={styles.addToCartBtn}>
-              <Button text={"add"} type={"cartBtn"} />
+              <Button text={"add"} type={"cartBtn"} color={"#d23f57"} />
             </div>
           </div>
         </div>

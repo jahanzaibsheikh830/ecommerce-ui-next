@@ -66,6 +66,9 @@
     }
   }
   .card:hover {
+    box-shadow: 0 0 45px #e2e1f0;
+    cursor: pointer;
+    transition: 0.5s;
     .cardContentHeaderIcon {
       display: block;
     }
