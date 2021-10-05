@@ -1,0 +1,30 @@
+.bottomNavMain {
+  // display: flex;
+  justify-content: "space-between";
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0px 1px 3px #e2e1f0;
+  display: none;
+  .col4 {
+    width: 25%;
+    cursor: pointer;
+    p {
+      color: #515d60;
+      font-size: 14px;
+    }
+  }
+  .col4:hover {
+    :first-child,
+    p {
+      color: #d23f57;
+      transition: 0.5s;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    display: flex;
+  }
+}
