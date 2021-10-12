@@ -4,15 +4,20 @@ import Container from "./container";
 import { RiPhoneLine } from "react-icons/ri";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineSearch, AiOutlineShopping } from "react-icons/ai";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import {
+  IoIosArrowDown,
+  IoIosArrowForward,
+  IoMdArrowDropright,
+} from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
 import Logo from "../assests/logo.svg";
-
+import { listData } from "../helperData/categoryList.helper";
 import Image from "next/image";
 export default function Header() {
   const [state, setState] = useState<boolean>(false);
+  const [showlist, setShowList] = useState<boolean>(false);
   return (
     <div>
       <div className={styles.mainHeader}>
@@ -68,7 +73,12 @@ export default function Header() {
                 </div>
               </div>
               <div className={styles.searchList}>
-                <button type='button' onClick={() => setState((prev) => !prev)}>
+                <button
+                  type='button'
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
                   All Categories
                   <MdKeyboardArrowDown className={styles.arrow} size={17} />
                 </button>
@@ -91,6 +101,9 @@ export default function Header() {
                 <FaRegUser size={17} />
               </div>
               <div className={styles.iconBackground}>
+                <div className={styles.cartQuantity}>
+                  <span>1</span>
+                </div>
                 <AiOutlineShopping size={25} />
               </div>
             </div>
@@ -100,7 +113,10 @@ export default function Header() {
       <div className={styles.navBar}>
         <Container>
           <div className={styles.navBarMain}>
-            <div className={styles.categoryMain}>
+            <div
+              className={styles.categoryMain}
+              onClick={() => setShowList((prev) => !prev)}
+            >
               <div>
                 <BsFillGridFill size={17} />
               </div>
@@ -115,13 +131,121 @@ export default function Header() {
             </div>
             <div className={styles.nav}>
               <ul>
-                <li>Home</li>
-                <li>Pages</li>
-                <li>User Account</li>
-                <li>Vendor Account</li>
-                <li>Back to Demos</li>
+                <li className={styles.homeMain}>
+                  <div className={styles.title}>Home</div>
+                  <div className={styles.navListOne}>
+                    <p className={styles.lisTitle}>Super Store</p>
+                    <div>
+                      <p>Grocery</p>
+                      <p>Shop V3</p>
+                      <p>Shop V4</p>
+                    </div>
+                  </div>
+                </li>
+                <li className={styles.pagesMain}>
+                  <div className={styles.title}>Pages</div>
+                  <div className={styles.navListTwo}>
+                    <div>
+                      <p>
+                        <span>Sale Page</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Vendor</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Shop</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li className={styles.accountsMain}>
+                  <div className={styles.title}>Accounts</div>
+                  <div className={styles.navListTwo}>
+                    <div>
+                      <p>
+                        <span>Orders</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Profile</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Address</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Support tickets</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Wishlist</span>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li className={styles.vendorMain}>
+                  <div className={styles.title}>Vendor Account</div>
+                  <div className={styles.navListTwo}>
+                    <div>
+                      <p>
+                        <span>Dashboard</span>
+                      </p>
+                      <p>
+                        <span>Products</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Orders</span>
+                        <span>
+                          <IoMdArrowDropright />
+                        </span>
+                      </p>
+                      <p>
+                        <span>Profile</span>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className={styles.title}>Back to Demos</div>
+                </li>
               </ul>
             </div>
+          </div>
+          <div
+            className={showlist ? styles.categoryList : styles.categoryListNone}
+          >
+            <ul>
+              {listData.map((value, index) => {
+                return (
+                  <li key={index}>
+                    <value.icon size={20} />
+                    <span>{value.text}</span>
+                    {/* {value.moreIcon && <value.moreIcon size={15} />} */}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </Container>
       </div>

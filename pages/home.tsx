@@ -16,6 +16,7 @@ import MoreData from "../components/moreItem";
 import ServiceCard from "../components/cards/serviceCard";
 import Footer from "../components/footer";
 import BottomTab from "../components/bottomNav";
+// import Dummy from "../components/carousel";
 export default function Home() {
   return (
     <div>
@@ -39,6 +40,7 @@ export default function Home() {
       <MoreData />
       <ServiceCard />
       <Footer />
+      {/* <Dummy /> */}
       <BottomTab />
     </div>
   );

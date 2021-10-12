@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/components/card.module.scss";
 import Button from "../button";
@@ -16,7 +16,7 @@ interface cardProps {
   };
 }
 export default function Card({ salesData }: cardProps) {
-  console.log(salesData);
+  const [value, setValue] = useState(0);
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
@@ -48,8 +48,24 @@ export default function Card({ salesData }: cardProps) {
                 <span className={styles.cutPrice}>350</span>
               </p>
             </div>
-            <div className={styles.addToCartBtn}>
-              <Button text={"add"} type={"cartBtn"} color={"#d23f57"} />
+            <div className={styles.valueBtn}>
+              {value !== 0 && (
+                <>
+                  <div
+                    className={styles.addToCartBtn}
+                    onClick={() => setValue(value - 1)}
+                  >
+                    <Button text={"inc"} type={"cartBtn"} color={"#d23f57"} />
+                  </div>
+                  <div className={styles.cartVal}>{value}</div>
+                </>
+              )}
+              <div
+                className={styles.addToCartBtn}
+                onClick={() => setValue(value + 1)}
+              >
+                <Button text={"add"} type={"cartBtn"} color={"#d23f57"} />
+              </div>
             </div>
           </div>
         </div>

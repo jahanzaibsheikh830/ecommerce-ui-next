@@ -1,94 +1,125 @@
-import React, { useRef, useState } from "react";
-import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
+// import Image from "next/image";
 // import { Col, Row } from "react-bootstrap";
-import { useRouter } from "next/router";
-import Image1 from "../public/9410-AMI-Poster-80X60cm.jpg";
-import Image2 from "../public/9490-AMI-Poster-80X60cm.jpg";
-import Image3 from "../public/9500-AMI-Poster-80X60cm.jpg";
+// import { useRouter } from "next/router";
+// import dynamic from "next/dynamic";
+// import styles from "../styles/components/carousel.module.scss";
+// import { salesData } from "../helperData/sale.helper";
+// const ReactViewer = dynamic(() => import("react-viewer"), { ssr: false });
 
-export const Flipcard = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const flipCardData = [
-    { img: Image1, text: "loadReady" },
-    { img: Image2, text: "moreSpace" },
-    { img: Image3, text: "recover" },
-    { img: Image2, text: "moreSpace" },
-    { img: Image1, text: "loadReady" },
-    { img: Image2, text: "moreSpace" },
-    { img: Image3, text: "recover" },
-    { img: Image2, text: "moreSpace" },
-  ];
-  const router = useRouter();
-  const { locale } = router;
-  const ref = useRef(null);
+// const Carousel = ({ data = [], disableAnimation, reset }) => {
+//   const carouselDataLength = 0;
+//   // typeof window !== "undefined" ? (window.innerWidth >= 576 ? 4 : 7) : 0;
+//   const router = useRouter();
+//   const { locale } = router;
+//   const isEnglish = locale === "en-US";
+//   const ref = useRef(null);
+//   const intervalRef = useRef(null);
+//   const imageIntervalRef = useRef(null);
 
-  const onLeft = () => {
-    const width =
-      typeof window !== "undefined" ? (window.innerWidth >= 576 ? 4 : 7) : 0;
-    setActiveIndex((prev) => (prev === 0 ? width : --prev));
-  };
+//   const [ImageViwer, setImageViewer] = useState("");
 
-  const onRight = () => {
-    const width =
-      typeof window !== "undefined" ? (window.innerWidth >= 576 ? 4 : 7) : 0;
-    setActiveIndex((prev) => (prev < width ? ++prev : 0));
-  };
+//   const [activeIndex, setActiveIndex] = useState(carouselDataLength);
 
-  return (
-    <div className='flipCardMainContainer pt-4 pt-sm-4 pt-md-5 pb-1 pb-sm-0'>
-      <div className='flipCardDiv'>
-        <div className='carousel-controls left'>
-          <span onClick={onLeft} className='arrow-container'>
-            <i className='fas fa-chevron-left left-arrow'></i>
-          </span>
-        </div>
-        <div className='flipCardContainer'>
-          {/* <Row
-            lg={12}
-            style={{
-              transform: `translateX(-${
-                ref?.current?.clientWidth * activeIndex
-              }px)`,
-            }}
-            className='flex-nowrap carouselContainer'
-          >
-            {flipCardData.map((value, index) => (
-              <Col
-                lg={3}
-                md={6}
-                sm={6}
-                xs={8}
-                key={index}
-                className='flip-card mb-3'
-                ref={ref}
-              >
-                <Col classNameName='flip-card-inner'>
-                  <Col className='flip-card-front'>
-                    <Image
-                      objectFit='cover'
-                      src={value.img}
-                      alt='Avatar'
-                      className='flip-card-image'
-                    />
-                  </Col>
-                  <Col className='flip-card-back'>
-                    <h1>{English ? EN[value.text] : AR[value.text]}</h1>
-                    <div className='btns-main'>
-                      <i className='fa fa-link btn-icons' />
-                      <i className='fa fa-expand-arrows-alt btn-icons' />
-                    </div>
-                  </Col>
-                </Col>
-              </Col>
-            ))}
-          </Row> */}
-        </div>
-        <div className='carousel-controls right'>
-          <span onClick={onRight} className='arrow-container'>
-            <i className='fas fa-chevron-right right-arrow'></i>{" "}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
+//   const onLeft = () => {
+//     // clearInterval(intervalRef.current);
+//     setActiveIndex((prev) => (prev === 0 ? carouselDataLength : --prev));
+//   };
+
+//   const onRight = () => {
+//     // clearInterval(intervalRef.current);
+//     setActiveIndex((prev) => (prev < carouselDataLength ? ++prev : 0));
+//   };
+
+//   const onRightCarousel = () => {
+//     if (!!String(ImageViwer)) {
+//       clearInterval(imageIntervalRef.current);
+//       setImageViewer((prev) => (prev < data?.length - 1 ? ++prev : 0));
+//     }
+//   };
+
+//   const onChange = (_, index) => {
+//     // clearInterval(imageIntervalRef);
+//     setImageViewer(index);
+//   };
+
+//   // useEffect(() => {
+//   //   clearInterval(imageIntervalRef?.current);
+//   //   if (!!String(ImageViwer))
+//   //     imageIntervalRef.current = setTimeout(() => {
+//   //       onRightCarousel();
+//   //     }, 2000);
+//   // }, [ImageViwer]);
+
+//   // useEffect(() => {
+//   //   if (!disableAnimation)
+//   //     intervalRef.current = setTimeout(() => {
+//   //       onRight();
+//   //       // else onLeft();
+//   //     }, 2000);
+//   //   else clearInterval(intervalRef?.current);
+//   // }, [activeIndex, disableAnimation, reset]);
+
+//   // useEffect(() => {
+//   //   if (reset) {
+//   //     setActiveIndex(isEnglish ? 0 : carouselDataLength);
+//   //   }
+//   // }, [reset]);
+
+//   return (
+//     <div className={styles.flipCardMainContainer} dir={"ltr"}>
+//       <div className={styles.flipCardDiv}>
+//         <div className={`${styles.carousel_controls} ${styles.left}`}>
+//           <span onClick={onLeft} className={styles.arrow_container}>
+//             <i className={styles.left_arrow}></i>
+//           </span>
+//         </div>
+//         <div className={styles.flipCardContainerDiv}>
+//           <div className={styles.flipCardContainer}>
+//             <div
+//               style={{
+//                 transform: `translateX(-${
+//                   ref?.current?.clientWidth * activeIndex
+//                 }px)`,
+//                 display: "flex",
+//               }}
+//               className={`${styles.flex_nowrap} ${styles.carouselContainer}`}
+//             >
+//               {salesData.map((value, index) => (
+//                 <div key={index} className={styles.flip_card} ref={ref}>
+//                   <div className={styles.flip_card_inner}>
+//                     <div className={styles.flip_card_front}>
+//                       <Image
+//                         objectFit='cover'
+//                         src={value.image}
+//                         alt='Avatar'
+//                         className={styles.flip_card_image}
+//                         onClick={() => setImageViewer(index)}
+//                       />
+//                     </div>
+//                   </div>
+//                   <p className={styles.carousel_text}>{value?.title}</p>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//         <div className={`${styles.carousel_controls} ${styles.right}`}>
+//           <span onClick={onRight} className={styles.arrow_container}>
+//             <i className={styles.right_arrow}></i>
+//           </span>
+//         </div>
+//       </div>
+//       <ReactViewer
+//         visible={!!String(ImageViwer)}
+//         activeIndex={ImageViwer}
+//         drag={false}
+//         onChange={onChange}
+//         onClose={() => setImageViewer("")}
+//         images={data}
+//       />
+//     </div>
+//   );
+// };
+
+// export default Carousel;

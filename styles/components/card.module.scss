@@ -63,6 +63,14 @@
         font-weight: 600;
         text-decoration: line-through;
       }
+      .cartVal {
+        text-align: center;
+      }
+      .valueBtn {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+      }
     }
   }
   .card:hover {

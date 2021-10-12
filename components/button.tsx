@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/components/button.module.scss";
 import { GrAdd } from "react-icons/gr";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 interface buttonProps {
   text?: string;
   type?: string;
@@ -23,7 +24,17 @@ export default function Button({ text, type, color }: buttonProps) {
         }
       >
         {text == "add" ? (
-          <GrAdd size={12} className={styles.addBtn} color={"#d23f57"} />
+          <AiOutlinePlus
+            size={12}
+            className={styles.addBtn}
+            color={"#d23f57"}
+          />
+        ) : text == "inc" ? (
+          <AiOutlineMinus
+            size={12}
+            className={styles.addBtn}
+            color={"#d23f57"}
+          />
         ) : (
           text
         )}
