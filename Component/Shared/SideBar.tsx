@@ -3,7 +3,7 @@ import {
   carCompaniesData,
   phonesCompaniesData,
   opticsAndWatchCompaniesData,
-} from "../../HelperData/CompaniesData";
+} from "../../HelpersData/CompaniesData";
 import styles from "../../Styles/Components/Shared/SideBar.module.scss";
 import Image from "next/image";
 interface carsProps {

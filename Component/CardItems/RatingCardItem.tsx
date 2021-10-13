@@ -1,10 +1,10 @@
 import React from "react";
-import { ratingCardData } from "../../HelperData/RatingItemsData.helper";
+import { ratingCardData } from "../../HelpersData/RatingItemsData.helper";
 import Container from "../Shared/Container";
 import { GiStarGate } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
 import styles from "../../Styles/Components/CardItems/Rating.module.scss";
-import RatingCard from "../Cards/RatingCard";
+import RatingCard from "../Card/RatingCard";
 import ProductHeader from "./ProductHeader";
 export default function RatingCardItem() {
   return (

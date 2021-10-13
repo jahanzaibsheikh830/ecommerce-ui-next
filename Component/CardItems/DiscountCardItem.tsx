@@ -1,10 +1,10 @@
 import React from "react";
-import { DiscountCardData } from "../../HelperData/DiscountData.helper";
+import { DiscountCardData } from "../../HelpersData/DiscountData.helper";
 import styles from "../../Styles/Components/CardItems/DiscountCardItem.module.scss";
 import Container from "../Shared/Container";
 import { AiOutlineGift } from "react-icons/ai";
 import { IoMdArrowDropright } from "react-icons/io";
-import DiscountCard from "../Cards/FeaturedCard";
+import DiscountCard from "../Card/FeaturedCard";
 import ProductHeader from "./ProductHeader";
 export default function DiscountCardItem() {
   return (

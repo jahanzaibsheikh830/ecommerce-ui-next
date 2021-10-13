@@ -3,14 +3,14 @@ import Image from "next/image";
 import styles from "../../Styles/Components/Cards/Card.module.scss";
 import Button from "../Shared/Button";
 import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
-import { cartItem } from "../../Store/Actions/CartAction";
+import { cartItem } from "../../ReduxStore/Actions/CartAction";
 import {
   AiFillEye,
   AiOutlineHeart,
   AiFillStar,
   AiOutlineStar,
 } from "react-icons/ai";
-import { incItem, decItem } from "../../Lib/HelperFunction";
+import { incItem, decItem } from "../../Libs/HelpersFunction";
 import Modal from "../Shared/Modal";
 interface cardProps {
   salesData?: {

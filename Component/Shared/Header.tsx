@@ -14,7 +14,7 @@ import { FaRegUser } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
 import Logo from "../../assests/logo.svg";
 import Basket from "./Basket";
-import { listData } from "../../HelperData/CategoryList.helper";
+import { listData } from "../../HelpersData/CategoryList.helper";
 import { useSelector, RootStateOrAny } from "react-redux";
 import Image from "next/image";
 export default function Header() {

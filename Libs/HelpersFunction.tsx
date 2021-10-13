@@ -1,4 +1,4 @@
-import { cartItem } from "../Store/Actions/CartAction";
+import { cartItem } from "../ReduxStore/Actions/CartAction";
 export const incItem = (dispatch, salesData, cartState) => {
   const exist = cartState?.find((item) => item.id === salesData?.id);
   if (exist) {

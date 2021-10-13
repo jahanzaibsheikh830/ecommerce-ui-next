@@ -1,6 +1,6 @@
 import React from "react";
-import { moreData } from "../../HelperData/MoreItem.helper";
-import Card from "../Cards/Card";
+import { moreData } from "../../HelpersData/MoreItem.helper";
+import Card from "../Card/Card";
 import Container from "../Shared/Container";
 import { IoMdArrowDropright } from "react-icons/io";
 import styles from "../../Styles/Components/CardItems/MoreItem.module.scss";

@@ -1,5 +1,5 @@
 import productImg from "../assests/download.png";
-import Button from "../Components/Shared/Button";
+import Button from "../Component/Shared/Button";
 export const slidesData = [
   {
     image: productImg,

@@ -4,8 +4,8 @@ import Container from "../Shared/Container";
 import styles from "../../Styles/Components/CardItems/CarsMain.module.scss";
 import { GiElectric } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
-import { phonesCardData } from "../../HelperData/PhoneCardItems.helper";
-import Card from "../Cards/Card";
+import { phonesCardData } from "../../HelpersData/PhoneCardItems.helper";
+import Card from "../Card/Card";
 import ProductHeader from "./ProductHeader";
 export default function CarsMain() {
   return (

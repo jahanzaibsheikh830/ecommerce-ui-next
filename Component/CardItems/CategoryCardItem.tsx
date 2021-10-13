@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { CategoryCardData } from "../../HelperData/CatergoryItem.helper";
-import CategoryCard from "../Cards/CategoryCard";
+import { CategoryCardData } from "../../HelpersData/CatergoryItem.helper";
+import CategoryCard from "../Card/CategoryCard";
 import Container from "../Shared/Container";
 import { IoMdArrowDropright } from "react-icons/io";
 import { BsFillGridFill } from "react-icons/bs";

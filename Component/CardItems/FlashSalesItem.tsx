@@ -1,6 +1,6 @@
 import React from "react";
-import { salesData } from "../../HelperData/Sale.helper";
-import Card from "../Cards/Card";
+import { salesData } from "../../HelpersData/Sale.helper";
+import Card from "../Card/Card";
 import Container from "../Shared/Container";
 import { GiElectric } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";

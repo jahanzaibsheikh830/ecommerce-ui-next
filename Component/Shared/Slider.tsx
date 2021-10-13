@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { slidesData } from "../../HelperData/Slider.helper";
+import { slidesData } from "../../HelpersData/Slider.helper";
 import SliderItem from "../CardItems/SliderItem";
 // import OwlCarousel from "react-owl-carousel2";
 // import "owl.carousel/dist/assets/owl.carousel.css";

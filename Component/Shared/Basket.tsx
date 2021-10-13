@@ -6,7 +6,7 @@ import img from "../assests/bikeImg2.webp";
 import Image from "next/image";
 import { useSelector, useDispatch, RootStateOrAny } from "react-redux";
 import { MdClear } from "react-icons/md";
-import { incItem, decItem, removeItem } from "../../Lib/HelperFunction";
+import { incItem, decItem, removeItem } from "../../Libs/HelpersFunction";
 export default function Basket({ showBasket, setShowBasket }) {
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems

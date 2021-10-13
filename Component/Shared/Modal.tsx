@@ -4,9 +4,9 @@ import img from "../assests/bikeImg2.webp";
 import Image from "next/image";
 import Button from "./Button";
 import { MdClear } from "react-icons/md";
-import { slidesData } from "../../HelperData/Slider.helper";
+import { slidesData } from "../../HelpersData/Slider.helper";
 import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
-import { incItem, decItem } from "../../Lib/HelperFunction";
+import { incItem, decItem } from "../../Libs/HelpersFunction";
 
 interface modalProps {
   modalData?: {

@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../Shared/Container";
-import { serviceData } from "../../HelperData/ServiceData.helper";
+import { serviceData } from "../../HelpersData/ServiceData.helper";
 import styles from "../../Styles/Components/Cards/ServiceCard.module.scss";
 export default function ServiceCard() {
   return (

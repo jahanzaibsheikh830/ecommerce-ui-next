@@ -2,11 +2,9 @@ import React from "react";
 import SideBar from "../Shared/SideBar";
 import Container from "../Shared/Container";
 import styles from "../../Styles/Components/CardItems/CarsMain.module.scss";
-import { GiElectric } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
-import { opticsWatchCardData } from "../../HelperData/OpticscardItems.helper";
-import Card from "../Cards/Card";
-
+import { carsCardData } from "../../HelpersData/CarsCardItem.helper";
+import Card from "../Card/Card";
 import ProductHeader from "./ProductHeader";
 export default function CarsMain() {
   return (
@@ -14,16 +12,16 @@ export default function CarsMain() {
       <Container>
         <div className={styles.carsMain}>
           <div>
-            <SideBar optics />
+            <SideBar cars={true} />
           </div>
           <div className={styles.cars}>
             <ProductHeader
-              title='Optics / Watch'
+              title='Cars'
               linkTitle='View all'
               LinkIcon={IoMdArrowDropright}
             />
             <div className={styles.carsCardMain}>
-              {opticsWatchCardData.map((val, ind) => {
+              {carsCardData.map((val, ind) => {
                 return <Card salesData={val} key={ind} />;
               })}
             </div>
