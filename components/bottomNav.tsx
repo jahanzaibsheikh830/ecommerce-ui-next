@@ -6,10 +6,12 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { BsFillGridFill } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { useSelector, RootStateOrAny } from "react-redux";
 
 export default function BottomNav() {
-  const cartState = useSelector((state) => state?.CartReducers?.cartItems);
+  const cartState = useSelector(
+    (state: RootStateOrAny) => state?.CartReducers?.cartItems
+  );
   return (
     <div>
       <div className={styles.bottomNavMain}>

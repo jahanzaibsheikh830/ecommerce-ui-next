@@ -4,11 +4,13 @@ import styles from "../styles/components/basket.module.scss";
 import Button from "./button";
 import img from "../assests/bikeImg2.webp";
 import Image from "next/image";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch, RootStateOrAny } from "react-redux";
 import { MdClear } from "react-icons/md";
 import { incItem, decItem, removeItem } from "../lib/helperFunction";
 export default function Basket({ showBasket, setShowBasket }) {
-  const cartState = useSelector((state) => state?.CartReducers?.cartItems);
+  const cartState = useSelector(
+    (state: RootStateOrAny) => state?.CartReducers?.cartItems
+  );
   const dispatch = useDispatch();
   return (
     <div className={showBasket ? styles.basketMain : styles.basketMainNone}>
@@ -21,7 +23,7 @@ export default function Basket({ showBasket, setShowBasket }) {
             <span>
               <AiOutlineShopping size={23} />
             </span>
-            <span>{cartState.length} Item</span>
+            <span>{cartState?.length} Item</span>
           </div>
           <hr className={styles.cartLine} />
           <div className={styles.cartItemsMain}>
@@ -44,7 +46,7 @@ export default function Basket({ showBasket, setShowBasket }) {
                         type={"cartItemBtn"}
                         color={"#d23f57"}
                         qty={item.qty}
-                        onClick={() => decItem(dispatch, item, cartState)}
+                        onClick={(e) => decItem(dispatch, item, cartState)}
                       />
                     </span>
                   </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/components/card.module.scss";
 import Button from "../button";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
 import { cartItem } from "../../store/actions/CartAction";
 import {
   AiFillEye,
@@ -21,7 +21,9 @@ interface cardProps {
 }
 export default function Card({ salesData }: cardProps) {
   const dispatch = useDispatch();
-  const cartState = useSelector((state) => state?.CartReducers?.cartItems);
+  const cartState = useSelector(
+    (state: RootStateOrAny) => state?.CartReducers?.cartItems
+  );
   const cartQty = cartState.find((itm) => itm.id === salesData?.id && itm.qty);
   return (
     <div className={styles.cardContainer}>

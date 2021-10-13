@@ -7,7 +7,7 @@ interface buttonProps {
   type?: string;
   color?: string;
   qty?: number;
-  onClick?: (event: MouseEvent) => void;
+  onClick?: any;
 }
 export default function Button({
   text,

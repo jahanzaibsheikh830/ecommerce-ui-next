@@ -15,13 +15,15 @@ import { BsFillGridFill } from "react-icons/bs";
 import Logo from "../assests/logo.svg";
 import Basket from "./basket";
 import { listData } from "../helperData/categoryList.helper";
-import { useSelector } from "react-redux";
+import { useSelector, RootStateOrAny } from "react-redux";
 import Image from "next/image";
 export default function Header() {
   const [state, setState] = useState<boolean>(false);
   const [showlist, setShowList] = useState<boolean>(false);
   const [showBasket, setShowBasket] = useState<boolean>(false);
-  const cartState = useSelector((state) => state?.CartReducers?.cartItems);
+  const cartState = useSelector(
+    (state: RootStateOrAny) => state?.CartReducers?.cartItems
+  );
   return (
     <div>
       <div className={styles.mainHeader}>
