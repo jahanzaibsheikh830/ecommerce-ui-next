@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../../styles/components/categoryCard.module.scss";
-import Button from "../button";
+import styles from "../../Styles/Components/Cards/CategoryCard.module.scss";
+import Button from "../Shared/Button";
 interface CategoriesData {
   cardData?: {
     image?: any;

@@ -1,11 +1,11 @@
 import React from "react";
-import { featuredData } from "../helperData/featuredData.helper";
-import styles from "../styles/components/fearturedCardItem.module.scss";
+import { featuredData } from "../../HelperData/FeaturedData.helper";
+import styles from "../../Styles/Components/CardItems/FearturedCardItem.module.scss";
 import { GiSeaStar } from "react-icons/gi";
 
 import { IoMdArrowDropright } from "react-icons/io";
-import FeaturedCard from "./cards/featuredCard";
-import ProductHeader from "./productHeader";
+import FeaturedCard from "../Cards/FeaturedCard";
+import ProductHeader from "./ProductHeader";
 export default function FeaturedCardItem() {
   return (
     <div className={styles.Main}>

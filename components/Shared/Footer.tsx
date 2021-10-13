@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "./container";
-import styles from "../styles/components/footer.module.scss";
-import logo from "../assests/logo.svg";
+import Container from "./Container";
+import styles from "../../Styles/Components/Shared/Footer.module.scss";
+import logo from "../../assests/logo.svg";
 import Image from "next/image";
-import googlePng from "../assests/google.png";
-import appStore from "../assests/appstore.png";
+import googlePng from "../../assests/google.png";
+import appStore from "../../assests/appstore.png";
 import { FaFacebookF } from "react-icons/fa";
 import { CgTwitter } from "react-icons/cg";
 import {

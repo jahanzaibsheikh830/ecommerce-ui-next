@@ -21,7 +21,8 @@
     "react-redux": "^7.2.5",
     "react-responsive-carousel": "^3.2.21",
     "react-viewer": "^3.2.2",
-    "redux": "^4.1.1"
+    "redux": "^4.1.1",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@types/react": "17.0.20",

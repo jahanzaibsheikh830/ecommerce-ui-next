@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/components/bottomNav.module.scss";
+import styles from "../../Styles/Components/Shared/BottomNav.module.scss";
 import {
   AiOutlineHome,
   AiOutlineShoppingCart,

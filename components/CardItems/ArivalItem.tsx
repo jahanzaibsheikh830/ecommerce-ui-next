@@ -1,11 +1,11 @@
 import React from "react";
-import Container from "./container";
-import { arrivalData } from "../helperData/arrivalData.helper";
+import Container from "../Shared/Container";
+import { arrivalData } from "../../HelperData/ArrivalData.helper";
 import { MdFiberNew } from "react-icons/md";
 import { IoMdArrowDropright } from "react-icons/io";
-import styles from "../styles/components/arrivalItems.module.scss";
-import ArrivalCard from "./cards/featuredCard";
-import ProductHeader from "./productHeader";
+import styles from "../../Styles/Components/CardItems/ArrivalItems.module.scss";
+import ArrivalCard from "../Cards/FeaturedCard";
+import ProductHeader from "./ProductHeader";
 export default function ArivalItem() {
   return (
     <div className={styles.main}>

@@ -1,12 +1,12 @@
 import React from "react";
-import Container from "./container";
-import { allcategoriesData } from "../helperData/allCategories.helper";
+import Container from "../Shared/Container";
+import { allcategoriesData } from "../../HelperData/AllCategories.helper";
 import { IoMdArrowDropright } from "react-icons/io";
 import { BsFillGridFill } from "react-icons/bs";
-import styles from "../styles/components/allCategoryItem.module.scss";
-import AllCategoryCard from "./cards/allCategoryCard";
+import styles from "../../Styles/Components/CardItems/AllCategoryItem.module.scss";
+import AllCategoryCard from "../Cards/AllCategoryCard";
 
-import ProductHeader from "./productHeader";
+import ProductHeader from "./ProductHeader";
 export default function AllCategoryCardItem() {
   return (
     <div className={styles.main}>

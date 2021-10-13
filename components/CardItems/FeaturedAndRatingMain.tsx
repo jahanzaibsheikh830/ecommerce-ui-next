@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "./container";
-import RatingCardItem from "./ratingCardItem";
-import FeaturedCardItem from "./featuredCardItem";
-import styles from "../styles/components/featuredAndRatingMain.module.scss";
+import Container from "../Shared/Container";
+import RatingCardItem from "./RatingCardItem";
+import FeaturedCardItem from "./FeaturedCardItem";
+import styles from "../../styles/Components/CardItems/FeaturedAndRatingMain.module.scss";
 export default function FeaturedAndRatingMain() {
   return (
     <div style={{ backgroundColor: "#f6f9fc" }}>

@@ -3,8 +3,8 @@ import {
   carCompaniesData,
   phonesCompaniesData,
   opticsAndWatchCompaniesData,
-} from "../helperData/CompaniesData";
-import styles from "../styles/components/sideBar.module.scss";
+} from "../../HelperData/CompaniesData";
+import styles from "../../Styles/Components/Shared/SideBar.module.scss";
 import Image from "next/image";
 interface carsProps {
   cars?: boolean;

@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./container";
-import styles from "../styles/components/slider.module.scss";
+import Container from "../Shared/Container";
+import styles from "../../Styles/Components/Shared/Slider.module.scss";
 import Image from "next/image";
 interface slideDataProps {
   slideData?: {

@@ -1,10 +1,10 @@
 import React from "react";
-import { moreData } from "../helperData/moreItem.helper";
-import Card from "./cards/card";
-import Container from "./container";
+import { moreData } from "../../HelperData/MoreItem.helper";
+import Card from "../Cards/Card";
+import Container from "../Shared/Container";
 import { IoMdArrowDropright } from "react-icons/io";
-import styles from "../styles/components/moreItem.module.scss";
-import ProductHeader from "./productHeader";
+import styles from "../../Styles/Components/CardItems/MoreItem.module.scss";
+import ProductHeader from "./ProductHeader";
 export default function salesItem() {
   return (
     <div className={styles.main}>

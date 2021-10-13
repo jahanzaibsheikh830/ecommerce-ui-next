@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/components/productHeader.module.scss";
+import styles from "../../Styles/Components/CardItems/ProductHeader.module.scss";
 interface ProductHeaderProps {
   title?: string;
   TitleIcon?: any;

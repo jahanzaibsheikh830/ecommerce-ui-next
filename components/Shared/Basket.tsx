@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { AiOutlineShopping } from "react-icons/ai";
-import styles from "../styles/components/basket.module.scss";
-import Button from "./button";
+import styles from "../../Styles/Components/Shared/Basket.module.scss";
+import Button from "./Button";
 import img from "../assests/bikeImg2.webp";
 import Image from "next/image";
 import { useSelector, useDispatch, RootStateOrAny } from "react-redux";
 import { MdClear } from "react-icons/md";
-import { incItem, decItem, removeItem } from "../lib/helperFunction";
+import { incItem, decItem, removeItem } from "../../Lib/HelperFunction";
 export default function Basket({ showBasket, setShowBasket }) {
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
   );
+  const totalPrice = cartState.reduce((a, c) => a + c.qty * c.price, 0);
+  console.log(totalPrice);
   const dispatch = useDispatch();
   return (
     <div className={showBasket ? styles.basketMain : styles.basketMainNone}>
@@ -76,7 +78,7 @@ export default function Basket({ showBasket, setShowBasket }) {
             })}
           </div>
           <div className={styles.btnMain}>
-            <Button text='Checkout Now ($750.000)' type='cartShopBtn' />
+            <Button text={`Checkout Now ($${totalPrice})`} type='cartShopBtn' />
             <Button text='view cart' type='viewCartBtn' />
           </div>
         </div>

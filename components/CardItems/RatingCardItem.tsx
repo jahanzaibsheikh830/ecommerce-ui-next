@@ -1,11 +1,11 @@
 import React from "react";
-import { ratingCardData } from "../helperData/ratingItemsData.helper";
-import Container from "./container";
+import { ratingCardData } from "../../HelperData/RatingItemsData.helper";
+import Container from "../Shared/Container";
 import { GiStarGate } from "react-icons/gi";
 import { IoMdArrowDropright } from "react-icons/io";
-import styles from "../styles/components/rating.module.scss";
-import RatingCard from "./cards/ratingCard";
-import ProductHeader from "./productHeader";
+import styles from "../../Styles/Components/CardItems/Rating.module.scss";
+import RatingCard from "../Cards/RatingCard";
+import ProductHeader from "./ProductHeader";
 export default function RatingCardItem() {
   return (
     <div className={styles.ratingMain}>

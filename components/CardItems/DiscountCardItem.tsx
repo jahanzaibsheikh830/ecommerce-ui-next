@@ -1,11 +1,11 @@
 import React from "react";
-import { DiscountCardData } from "../helperData/discountData.helper";
-import styles from "../styles/components/discountCardItem.module.scss";
-import Container from "./container";
+import { DiscountCardData } from "../../HelperData/DiscountData.helper";
+import styles from "../../Styles/Components/CardItems/DiscountCardItem.module.scss";
+import Container from "../Shared/Container";
 import { AiOutlineGift } from "react-icons/ai";
 import { IoMdArrowDropright } from "react-icons/io";
-import DiscountCard from "./cards/featuredCard";
-import ProductHeader from "./productHeader";
+import DiscountCard from "../Cards/FeaturedCard";
+import ProductHeader from "./ProductHeader";
 export default function DiscountCardItem() {
   return (
     <div className={styles.main}>

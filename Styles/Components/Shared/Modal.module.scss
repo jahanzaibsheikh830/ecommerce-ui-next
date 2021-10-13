@@ -1,0 +1,147 @@
+.mainContainer {
+  position: fixed;
+  inset: 0px;
+  z-index: 1200;
+  display: block;
+  opacity: 1;
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  .modalMain {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    .modal {
+      background-color: rgb(255, 255, 255);
+      color: rgb(43, 52, 69);
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      margin: 32px;
+      position: relative;
+      overflow-y: auto;
+      display: flex;
+      //   justify-content: center;
+      max-height: calc(100% - 64px);
+      border-radius: 8px;
+      //   width: 500px;
+      padding: 20px;
+      .modalLeft {
+        height: 370px;
+        // display: flex;
+        // flex-direction: column;
+        padding-left: 10px;
+        .modalImg {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+        }
+        .modalImgView {
+          height: 64px;
+          width: 64px;
+          min-width: 64px;
+          background-color: white;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid rgb(210, 63, 87);
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 70px;
+        }
+      }
+      .modalRight {
+        padding: 0 50px;
+        .cartBtn {
+          display: flex;
+          word-spacing: 10px;
+          :nth-child(2) {
+            margin: 0 10px;
+          }
+        }
+        .modalClosed {
+          user-select: none;
+          width: 1em;
+          height: 1em;
+          display: inline-block;
+          fill: currentcolor;
+          flex-shrink: 0;
+          transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+          font-size: 1.25rem;
+          color: rgb(210, 63, 87);
+          position: absolute;
+          top: 5px;
+          right: 5px;
+        }
+        .modalTitle {
+          text-transform: capitalize;
+          margin-bottom: 16px;
+          margin-top: 0px;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 1.5;
+          white-space: normal;
+        }
+        .modalBrandName {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          span {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.5;
+            text-transform: none;
+            white-space: normal;
+          }
+        }
+        .modalRating {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          span {
+            margin-left: 8px;
+            margin-right: 8px;
+            line-height: 1;
+          }
+        }
+        .modalPrice {
+          margin-bottom: 4px;
+          margin-top: 0px;
+          font-size: 25px;
+          font-weight: 700;
+          line-height: 1;
+          color: rgb(210, 63, 87);
+          text-transform: none;
+          white-space: normal;
+        }
+        .modalStock {
+          text-transform: capitalize;
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        .modalSoldBy {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          margin-top: 40px;
+          span {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.5;
+            text-transform: none;
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+}

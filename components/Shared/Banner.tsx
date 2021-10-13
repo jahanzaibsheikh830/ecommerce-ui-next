@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "./container";
-import styles from "../styles/components/banner.module.scss";
-import banner1 from "../assests/banner1.webp";
-import banner2 from "../assests/banner2.webp";
+import Container from "./Container";
+import styles from "../../Styles/Components/Shared/Banner.module.scss";
+import banner1 from "../../assests/banner1.webp";
+import banner2 from "../../assests/banner2.webp";
 import Image from "next/image";
 export default function Banner() {
   return (

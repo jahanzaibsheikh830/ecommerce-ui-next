@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "../container";
-import { serviceData } from "../../helperData/serviceData.helper";
-import styles from "../../styles/components/serviceCard.module.scss";
+import Container from "../Shared/Container";
+import { serviceData } from "../../HelperData/ServiceData.helper";
+import styles from "../../Styles/Components/Cards/ServiceCard.module.scss";
 export default function ServiceCard() {
   return (
     <div className={styles.serviceCardMain}>

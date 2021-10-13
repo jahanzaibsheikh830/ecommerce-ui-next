@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from "../../styles/components/card.module.scss";
-import Button from "../button";
+import styles from "../../Styles/Components/Cards/Card.module.scss";
+import Button from "../Shared/Button";
 import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
-import { cartItem } from "../../store/actions/CartAction";
+import { cartItem } from "../../Store/Actions/CartAction";
 import {
   AiFillEye,
   AiOutlineHeart,
   AiFillStar,
   AiOutlineStar,
 } from "react-icons/ai";
-import { incItem, decItem } from "../../lib/helperFunction";
+import { incItem, decItem } from "../../Lib/HelperFunction";
+import Modal from "../Shared/Modal";
 interface cardProps {
   salesData?: {
     id: string;
@@ -20,6 +21,7 @@ interface cardProps {
   };
 }
 export default function Card({ salesData }: cardProps) {
+  const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
@@ -34,7 +36,11 @@ export default function Card({ salesData }: cardProps) {
               <Button text={"25% off"} />
             </div>
             <div className={styles.cardContentHeaderIcon}>
-              <AiFillEye className={styles.eyeIcon} size={20} />
+              <AiFillEye
+                className={styles.eyeIcon}
+                size={20}
+                onClick={() => setShowModal((prev) => !prev)}
+              />
               <AiOutlineHeart className={styles.heartIcon} size={20} />
             </div>
           </div>
@@ -82,6 +88,13 @@ export default function Card({ salesData }: cardProps) {
           </div>
         </div>
       </div>
+      {showModal && (
+        <Modal
+          modalData={salesData}
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
+      )}
     </div>
   );
 }

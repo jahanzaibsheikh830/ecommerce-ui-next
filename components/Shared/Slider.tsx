@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { slidesData } from "../helperData/slider.helper";
-import SliderItem from "./sliderItem";
+import { slidesData } from "../../HelperData/Slider.helper";
+import SliderItem from "../CardItems/SliderItem";
 // import OwlCarousel from "react-owl-carousel2";
 // import "owl.carousel/dist/assets/owl.carousel.css";
 export default function Slider() {

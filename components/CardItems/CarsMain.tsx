@@ -1,29 +1,27 @@
 import React from "react";
-import SideBar from "./sideBar";
-import Container from "./container";
-import styles from "../styles/components/carsMain.module.scss";
-import { GiElectric } from "react-icons/gi";
+import SideBar from "../Shared/SideBar";
+import Container from "../Shared/Container";
+import styles from "../../Styles/Components/CardItems/CarsMain.module.scss";
 import { IoMdArrowDropright } from "react-icons/io";
-import { opticsWatchCardData } from "../helperData/opticscardItems.helper";
-import Card from "./cards/card";
-
-import ProductHeader from "./productHeader";
+import { carsCardData } from "../../HelperData/CarsCardItem.helper";
+import Card from "../Cards/Card";
+import ProductHeader from "./ProductHeader";
 export default function CarsMain() {
   return (
     <div className={styles.mainContainer}>
       <Container>
         <div className={styles.carsMain}>
           <div>
-            <SideBar optics />
+            <SideBar cars={true} />
           </div>
           <div className={styles.cars}>
             <ProductHeader
-              title='Optics / Watch'
+              title='Cars'
               linkTitle='View all'
               LinkIcon={IoMdArrowDropright}
             />
             <div className={styles.carsCardMain}>
-              {opticsWatchCardData.map((val, ind) => {
+              {carsCardData.map((val, ind) => {
                 return <Card salesData={val} key={ind} />;
               })}
             </div>

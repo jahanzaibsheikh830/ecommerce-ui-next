@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "../styles/components/header.module.scss";
-import Container from "./container";
+import styles from "../../Styles/Components/Shared/Header.module.scss";
+import Container from "./Container";
 import { RiPhoneLine } from "react-icons/ri";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineSearch, AiOutlineShopping } from "react-icons/ai";
@@ -12,9 +12,9 @@ import {
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
-import Logo from "../assests/logo.svg";
-import Basket from "./basket";
-import { listData } from "../helperData/categoryList.helper";
+import Logo from "../../assests/logo.svg";
+import Basket from "./Basket";
+import { listData } from "../../HelperData/CategoryList.helper";
 import { useSelector, RootStateOrAny } from "react-redux";
 import Image from "next/image";
 export default function Header() {

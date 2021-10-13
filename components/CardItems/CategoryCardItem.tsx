@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { CategoryCardData } from "../helperData/catergoryItem.helper";
-import CategoryCard from "./cards/categoryCard";
-import Container from "./container";
+import { CategoryCardData } from "../../HelperData/CatergoryItem.helper";
+import CategoryCard from "../Cards/CategoryCard";
+import Container from "../Shared/Container";
 import { IoMdArrowDropright } from "react-icons/io";
 import { BsFillGridFill } from "react-icons/bs";
-import styles from "../styles/components/categoryCardItem.module.scss";
-import ProductHeader from "./productHeader";
+import styles from "../../Styles/Components/CardItems/CategoryCardItem.module.scss";
+import ProductHeader from "./ProductHeader";
 export default function CategoryCardItem() {
   return (
     <div className={styles.categoryCardMain}>

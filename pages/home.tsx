@@ -1,21 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
-import Header from "../components/header";
-import Slider from "../components/slider";
-import SaleItem from "../components/flashSalesItem";
-import CategoryCard from "../components/categoryCardItem";
-import FeaturedAndRatingMain from "../components/featuredAndRatingMain";
-import ArrivalCard from "../components/arivalItem";
-import DiscountCard from "../components/discountCardItem";
-import CarsMain from "../components/carsMain";
-import PhonesMain from "../components/phonesMain";
-import Banner from "../components/banner";
-import OpticsMain from "../components/opticsMain";
-import AllCategoryCard from "../components/allCategoryCardItem";
-import MoreData from "../components/moreItem";
-import ServiceCard from "../components/cards/serviceCard";
-import Footer from "../components/footer";
-import BottomTab from "../components/bottomNav";
+import Header from "../Components/Shared/Header";
+import Slider from "../Components/Shared/Slider";
+import SaleItem from "../Components/CardItems/FlashSalesItem";
+import CategoryCard from "../Components/CardItems/CategoryCardItem";
+import FeaturedAndRatingMain from "../Components/CardItems/FeaturedAndRatingMain";
+import ArrivalCard from "../Components/CardItems/ArivalItem";
+import DiscountCard from "../Components/CardItems/DiscountCardItem";
+import CarsMain from "../Components/CardItems/CarsMain";
+import PhonesMain from "../Components/CardItems/PhonesMain";
+import Banner from "../Components/Shared/Banner";
+import OpticsMain from "../Components/CardItems/OpticsMain";
+import AllCategoryCard from "../Components/CardItems/AllCategoryCardItem";
+import MoreData from "../Components/CardItems/MoreItem";
+import ServiceCard from "../Components/Cards/ServiceCard";
+import Footer from "../Components/Shared/Footer";
+import BottomTab from "../Components/Shared/BottomNav";
+import Modal from "../Components/Shared/Modal";
 // import Dummy from "../components/carousel";
 export default function Home() {
   return (
@@ -40,7 +41,7 @@ export default function Home() {
       <MoreData />
       <ServiceCard />
       <Footer />
-      {/* <Dummy /> */}
+      {/* <Modal /> */}
       <BottomTab />
     </div>
   );

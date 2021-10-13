@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/components/button.module.scss";
+import styles from "../../Styles/Components/Shared/Button.module.scss";
 import { GrAdd } from "react-icons/gr";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 interface buttonProps {
