@@ -6,6 +6,7 @@ import { BsFillGridFill } from "react-icons/bs";
 import styles from "../../Styles/Components/CardItems/AllCategoryItem.module.scss";
 import AllCategoryCard from "../Cards/AllCategoryCard";
 import ProductHeader from "./ProductHeader";
+
 export default function AllCategoryCardItem() {
   return (
     <div className={styles.main}>
