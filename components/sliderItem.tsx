@@ -12,7 +12,6 @@ interface slideDataProps {
 }
 
 export default function sliderItem({ slideData }: slideDataProps) {
-  console.log("slideData:", slideData);
   return (
     <div style={{ padding: "30px 0" }}>
       <Container>

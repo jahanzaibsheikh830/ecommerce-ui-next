@@ -5,23 +5,28 @@ import mobile from "../assests/mob.webp";
 
 export const salesData = [
   {
+    id: "sales1",
     image: shoe,
     title: "50% Off For Your First ",
     price: 250,
   },
   {
+    id: "sales2",
     image: watch,
-    title: "50% Off For Your First Shopping",
+    title: "50% Off For Your First Shopping watch",
     price: 250,
   },
   {
+    id: "sales3",
+
     image: watch2,
-    title: "50% Off For Your First Shopping",
+    title: "50% Off For Your First Shopping watch2",
     price: 250,
   },
   {
+    id: "sales4",
     image: mobile,
-    title: "50% Off For Your First Shopping",
+    title: "50% Off For Your First Shopping mobile",
     price: 250,
   },
   // {

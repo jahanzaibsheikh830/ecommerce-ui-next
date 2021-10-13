@@ -7,31 +7,42 @@ import carImg6 from "../assests/carImg6.webp";
 
 export const carsCardData = [
   {
+    id: "car1",
     image: carImg1,
     title: "Lord 2019",
     price: 250,
   },
   {
+    id: "car2",
+
     image: carImg2,
     title: "Budi 2017",
     price: 250,
   },
   {
+    id: "car3",
+
     image: carImg3,
     title: "Resla 2015",
     price: 250,
   },
   {
+    id: "car4",
+
     image: carImg4,
     title: "Xorsche 2018",
     price: 250,
   },
   {
+    id: "car5",
+
     image: carImg5,
     title: "Lord 2018",
     price: 250,
   },
   {
+    id: "car6",
+
     image: carImg6,
     title: "Lord 2020",
     price: 250,

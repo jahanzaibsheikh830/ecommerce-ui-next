@@ -13,11 +13,15 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
 import Logo from "../assests/logo.svg";
+import Basket from "./basket";
 import { listData } from "../helperData/categoryList.helper";
+import { useSelector } from "react-redux";
 import Image from "next/image";
 export default function Header() {
   const [state, setState] = useState<boolean>(false);
   const [showlist, setShowList] = useState<boolean>(false);
+  const [showBasket, setShowBasket] = useState<boolean>(false);
+  const cartState = useSelector((state) => state?.CartReducers?.cartItems);
   return (
     <div>
       <div className={styles.mainHeader}>
@@ -100,9 +104,12 @@ export default function Header() {
               <div className={styles.iconBackground}>
                 <FaRegUser size={17} />
               </div>
-              <div className={styles.iconBackground}>
+              <div
+                onClick={() => setShowBasket((prev) => !prev)}
+                className={styles.iconBackground}
+              >
                 <div className={styles.cartQuantity}>
-                  <span>1</span>
+                  <span>{cartState.length}</span>
                 </div>
                 <AiOutlineShopping size={25} />
               </div>
@@ -249,6 +256,7 @@ export default function Header() {
           </div>
         </Container>
       </div>
+      <Basket showBasket={showBasket} setShowBasket={setShowBasket} />
     </div>
   );
 }

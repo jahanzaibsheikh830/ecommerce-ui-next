@@ -17,7 +17,6 @@ export default function RatingCard({ ratingData }: ratingDataProps) {
       setWidth(window?.innerWidth);
     }
   }, []);
-  console.log("width: " + width);
   return (
     <div>
       <div className={styles.ratingCard}>

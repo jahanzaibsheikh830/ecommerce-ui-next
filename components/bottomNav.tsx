@@ -6,7 +6,10 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { BsFillGridFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
+
 export default function BottomNav() {
+  const cartState = useSelector((state) => state?.CartReducers?.cartItems);
   return (
     <div>
       <div className={styles.bottomNavMain}>
@@ -34,7 +37,7 @@ export default function BottomNav() {
             <p>Cart</p>
           </div>
           <div className={styles.cartQuantity}>
-            <span>1</span>
+            <span>{cartState.length}</span>
           </div>
         </div>
         <div className={styles.col4}>

@@ -6,11 +6,22 @@ interface buttonProps {
   text?: string;
   type?: string;
   color?: string;
+  qty?: number;
+  onClick?: (event: MouseEvent) => void;
 }
-export default function Button({ text, type, color }: buttonProps) {
+export default function Button({
+  text,
+  type,
+  color,
+  qty,
+  onClick,
+}: buttonProps) {
   return (
     <div>
       <button
+        onClick={onClick}
+        disabled={qty == 1 ? true : false}
+        type='button'
         className={
           type === "cartBtn"
             ? styles.cartBtn
@@ -20,6 +31,12 @@ export default function Button({ text, type, color }: buttonProps) {
             ? styles.categoryBtn
             : type === "statusBtn"
             ? styles.statusBtn
+            : type === "cartItemBtn"
+            ? styles.cartItemBtn
+            : type === "cartShopBtn"
+            ? styles.cartShopBtn
+            : type === "viewCartBtn"
+            ? styles.viewCartBtn
             : styles.salesBtn
         }
       >
