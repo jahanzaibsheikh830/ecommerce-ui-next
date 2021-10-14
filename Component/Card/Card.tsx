@@ -9,6 +9,7 @@ import {
   AiOutlineHeart,
   AiFillStar,
   AiOutlineStar,
+  AiFillHeart,
 } from "react-icons/ai";
 import { incItem, decItem } from "../../Libs/HelpersFunction";
 import Modal from "../Shared/Modal";
@@ -22,6 +23,7 @@ interface cardProps {
 }
 export default function Card({ salesData }: cardProps) {
   const [showModal, setShowModal] = useState(false);
+  const [heartFill, setHeartFill] = useState<boolean>(false);
   const dispatch = useDispatch();
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
@@ -41,7 +43,19 @@ export default function Card({ salesData }: cardProps) {
                 size={20}
                 onClick={() => setShowModal((prev) => !prev)}
               />
-              <AiOutlineHeart className={styles.heartIcon} size={20} />
+              {!heartFill ? (
+                <AiOutlineHeart
+                  color={"#0f3460"}
+                  size={20}
+                  onClick={() => setHeartFill((prev) => !prev)}
+                />
+              ) : (
+                <AiFillHeart
+                  color={"#d23f57"}
+                  size={20}
+                  onClick={() => setHeartFill((prev) => !prev)}
+                />
+              )}
             </div>
           </div>
           <div className={styles.cardContentImg}>
@@ -51,11 +65,11 @@ export default function Card({ salesData }: cardProps) {
             <div>
               <h3>{salesData?.title}</h3>
               <p className={styles.stars}>
-                <AiFillStar size={20} className={styles.filledRating} />
-                <AiFillStar size={20} className={styles.filledRating} />
-                <AiFillStar size={20} className={styles.filledRating} />
-                <AiFillStar size={20} className={styles.filledRating} />
-                <AiOutlineStar size={20} className={styles.outlineRating} />
+                <AiFillStar size={20} color={"#faaf00"} />
+                <AiFillStar size={20} color={"#faaf00"} />
+                <AiFillStar size={20} color={"#faaf00"} />
+                <AiFillStar size={20} color={"#faaf00"} />
+                <AiOutlineStar size={20} color={"rgba(0, 0, 0, 0.26)"} />
               </p>
               <p>
                 <span className={styles.price}>${salesData?.price}</span>

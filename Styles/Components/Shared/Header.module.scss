@@ -37,6 +37,13 @@
     }
   }
 }
+.searchBarMainFixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 10px 15px -1px #f3f3f3;
+  z-index: 999;
+}
 .searchBarMain {
   display: flex;
   align-items: center;
@@ -64,7 +71,6 @@
         outline: none;
         border: none;
         padding: 0px 0 0 5px;
-        width: 50%;
         max-width: 100%;
       }
       input::placeholder {
@@ -72,6 +78,7 @@
         font-size: 16px;
       }
       .searchList {
+        position: relative;
         @keyframes fadein {
           from {
             opacity: 0;
@@ -97,7 +104,7 @@
         }
         ul {
           position: absolute;
-          top: 102px;
+          top: 45px;
           background: #fff;
           list-style: none;
           margin: 0px;

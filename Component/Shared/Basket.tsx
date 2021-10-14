@@ -11,7 +11,6 @@ export default function Basket({ showBasket, setShowBasket }) {
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
   );
-  console.log("cartState===", cartState);
   const totalPrice = cartState.reduce((a, c) => a + c.qty * c.price, 0);
   const dispatch = useDispatch();
   return (

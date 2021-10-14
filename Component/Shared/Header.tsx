@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../../Styles/Components/Shared/Header.module.scss";
 import Container from "./Container";
 import { RiPhoneLine } from "react-icons/ri";
@@ -17,13 +17,38 @@ import Basket from "./Basket";
 import { listData } from "../../HelpersData/CategoryList.helper";
 import { useSelector, RootStateOrAny } from "react-redux";
 import Image from "next/image";
+import Modal from "./Modal";
 export default function Header() {
   const [state, setState] = useState<boolean>(false);
   const [showlist, setShowList] = useState<boolean>(false);
   const [showBasket, setShowBasket] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [height, setHeight] = useState(0);
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
   );
+  const prevScrollY = useRef(0);
+  const [goingUp, setGoingUp] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (prevScrollY.current < currentScrollY && goingUp) {
+        setGoingUp(false);
+      }
+      if (prevScrollY.current > currentScrollY && !goingUp) {
+        setGoingUp(true);
+      }
+
+      prevScrollY.current = currentScrollY;
+      setHeight(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [goingUp]);
+
   return (
     <div>
       <div className={styles.mainHeader}>
@@ -65,7 +90,11 @@ export default function Header() {
           </div>
         </Container>
       </div>
-      <div className={styles.searchBarMain}>
+      <div
+        className={`${styles.searchBarMain} 
+        ${height >= 40 && styles.searchBarMainFixed}
+        `}
+      >
         <Container>
           <div className={styles.searchBarHeader}>
             <div className={styles.logoNone}>
@@ -103,7 +132,10 @@ export default function Header() {
               </div>
             </div>
             <div className={styles.carts}>
-              <div className={styles.iconBackground}>
+              <div
+                className={styles.iconBackground}
+                onClick={() => setShowModal((prev) => !prev)}
+              >
                 <FaRegUser size={17} />
               </div>
               <div
@@ -259,6 +291,7 @@ export default function Header() {
         </Container>
       </div>
       <Basket showBasket={showBasket} setShowBasket={setShowBasket} />
+      {showModal && <Modal setShowModal={setShowModal} login />}
     </div>
   );
 }

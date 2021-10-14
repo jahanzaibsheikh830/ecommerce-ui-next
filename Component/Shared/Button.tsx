@@ -8,6 +8,7 @@ interface buttonProps {
   color?: string;
   qty?: number;
   onClick?: any;
+  width?: string;
 }
 export default function Button({
   text,
@@ -15,10 +16,12 @@ export default function Button({
   color,
   qty,
   onClick,
+  width,
 }: buttonProps) {
   return (
     <div>
       <button
+        style={{ width: width }}
         onClick={onClick}
         disabled={qty == 1 ? true : false}
         type='button'
