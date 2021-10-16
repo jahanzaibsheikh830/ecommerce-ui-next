@@ -135,9 +135,6 @@ export default function Modal({
                         <Button
                           text='Login'
                           type='sliderShopBtn'
-                          onClick={() =>
-                            incItem(dispatch, modalData, cartState)
-                          }
                           width={"100%"}
                         />
                       </div>

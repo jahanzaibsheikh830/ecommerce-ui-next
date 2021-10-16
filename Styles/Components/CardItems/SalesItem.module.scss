@@ -2,16 +2,15 @@
   background-color: #f6f9fc;
   padding: 60px 15px;
   .salesCard {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-    .owl-carousel {
-      .owl-nav {
-        .owl-next {
-          background-color: #d23f57 !important;
-        }
-      }
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    // gap: 25px;
+    // margin-top: 20px;
+    padding: 0 15px;
+  }
+  .slick-slider {
+    .slick-arrow {
+      background-color: red !important;
     }
   }
 }

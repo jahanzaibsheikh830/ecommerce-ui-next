@@ -29,6 +29,18 @@ export const salesData = [
     title: "50% Off For Your First Shopping mobile",
     price: 250,
   },
+  {
+    id: "sales5",
+    image: mobile,
+    title: "50% Off For Your First Shopping mobile",
+    price: 250,
+  },
+  {
+    id: "sales6",
+    image: mobile,
+    title: "50% Off For Your First Shopping mobile",
+    price: 250,
+  },
   // {
   //   image: mobile,
   //   title: "50% Off For Your First Shopping",
