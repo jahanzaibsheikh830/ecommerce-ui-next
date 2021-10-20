@@ -39,4 +39,19 @@ export const DiscountCardData = [
     name: "RG products",
     price: "$250",
   },
+  {
+    image: discountImg7,
+    name: "Setgearr 2020",
+    price: "$250",
+  },
+  {
+    image: discountImg8,
+    name: "Tony BGB",
+    price: "$250",
+  },
+  {
+    image: discountImg9,
+    name: "RG products",
+    price: "$250",
+  },
 ];

@@ -1,0 +1,15 @@
+.userheader {
+  display: flex;
+  justify-content: space-between;
+  :first-child {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    h3 {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1;
+      margin-left: 12px;
+    }
+  }
+}

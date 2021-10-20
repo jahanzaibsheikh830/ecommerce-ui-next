@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../Styles/Components/CardItems/ProductHeader.module.scss";
 interface ProductHeaderProps {
   title?: string;
   TitleIcon?: any;
@@ -15,24 +14,22 @@ export default function ProductHeader({
   color,
 }: ProductHeaderProps) {
   return (
-    <div className={styles.productHeader}>
-      <div className={styles.productHeading}>
+    <div className='productHeader'>
+      <div className='productHeading'>
         <div>
           {TitleIcon && (
-            <TitleIcon className={styles.productIcon} size={25} color={color} />
+            <TitleIcon className='productIcon' size={25} color={color} />
           )}
         </div>
         <div>
           <h2>{title}</h2>
         </div>
       </div>
-      <div className={styles.linkTitle}>
+      <div className='linkTitle'>
         <div>
           <p>{linkTitle}</p>
         </div>
-        <div>
-          {LinkIcon && <LinkIcon className={styles.linkIcon} size={20} />}
-        </div>
+        <div>{LinkIcon && <LinkIcon className='linkIcon' size={20} />}</div>
       </div>
     </div>
   );

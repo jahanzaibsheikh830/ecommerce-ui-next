@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../../Styles/Components/Cards/CategoryCard.module.scss";
 import Button from "../Shared/Button";
 interface CategoriesData {
   cardData?: {
@@ -11,15 +10,15 @@ interface CategoriesData {
 }
 export default function CategoryCard({ cardData }: CategoriesData) {
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.categoryCardMain}>
+    <div className='mainContainer'>
+      <div className='categoryCardMain'>
         <div
-          className={styles.categoryProduct}
+          className='categoryProduct'
           style={{
             backgroundImage: `url(${cardData?.image.src})`,
           }}
         >
-          <div className={styles.categoryProductBtn}>
+          <div className='categoryProductBtn'>
             <div>
               <Button text={cardData?.name} type={"categoryBtn"} />
             </div>

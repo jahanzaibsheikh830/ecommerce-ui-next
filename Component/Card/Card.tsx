@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from "../../Styles/Components/Cards/Card.module.scss";
 import Button from "../Shared/Button";
 import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
-import { cartItem } from "../../ReduxStore/Actions/CartAction";
+import { modal } from "../../ReduxStore/Actions/ModalAction";
 import {
   AiFillEye,
   AiOutlineHeart,
@@ -13,6 +12,7 @@ import {
 } from "react-icons/ai";
 import { incItem, decItem } from "../../Libs/HelpersFunction";
 import Modal from "../Shared/Modal";
+import Link from "next/link";
 interface cardProps {
   salesData?: {
     id: string;
@@ -29,19 +29,27 @@ export default function Card({ salesData }: cardProps) {
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
   );
   const cartQty = cartState.find((itm) => itm.id === salesData?.id && itm.qty);
+
   return (
-    <div className={styles.cardContainer}>
-      <div className={styles.card}>
+    <div className='cardContainer'>
+      <div className='card'>
         <div>
-          <div className={styles.cardContentHeader}>
+          <div className='cardContentHeader'>
             <div>
-              <Button text={"25% off"} />
+              <Button text='25% off' />
             </div>
-            <div className={styles.cardContentHeaderIcon}>
+            <div className='cardContentHeaderIcon'>
               <AiFillEye
-                className={styles.eyeIcon}
+                className='eyeIcon'
                 size={20}
-                onClick={() => setShowModal((prev) => !prev)}
+                onClick={() =>
+                  dispatch(
+                    modal({
+                      modalData: salesData,
+                      showModal: true,
+                    })
+                  )
+                }
               />
               {!heartFill ? (
                 <AiOutlineHeart
@@ -58,13 +66,22 @@ export default function Card({ salesData }: cardProps) {
               )}
             </div>
           </div>
-          <div className={styles.cardContentImg}>
-            <Image src={salesData?.image} alt={"sales product image"} />
+          <div className='cardContentImg'>
+            <Link
+              passHref
+              href={{
+                pathname: `product/[index]`,
+                query: salesData,
+              }}
+              as={`product/${salesData?.id}`}
+            >
+              <Image src={salesData?.image} alt={"sales product image"} />
+            </Link>
           </div>
-          <div className={styles.cardBottomContent}>
+          <div className='cardBottomContent'>
             <div>
               <h3>{salesData?.title}</h3>
-              <p className={styles.stars}>
+              <p className='stars'>
                 <AiFillStar size={20} color={"#faaf00"} />
                 <AiFillStar size={20} color={"#faaf00"} />
                 <AiFillStar size={20} color={"#faaf00"} />
@@ -72,14 +89,14 @@ export default function Card({ salesData }: cardProps) {
                 <AiOutlineStar size={20} color={"rgba(0, 0, 0, 0.26)"} />
               </p>
               <p>
-                <span className={styles.price}>${salesData?.price}</span>
-                <span className={styles.cutPrice}>350</span>
+                <span className='price'>${salesData?.price}</span>
+                <span className='cutPrice'>350</span>
               </p>
             </div>
-            <div className={styles.valueBtn}>
+            <div className='valueBtn'>
               {cartQty?.qty && cartQty !== 0 && (
                 <>
-                  <div className={styles.addToCartBtn}>
+                  <div className='addToCartBtn'>
                     <Button
                       text={"inc"}
                       type={"cartBtn"}
@@ -87,10 +104,10 @@ export default function Card({ salesData }: cardProps) {
                       onClick={() => decItem(dispatch, salesData, cartState)}
                     />
                   </div>
-                  <div className={styles.cartVal}>{cartQty?.qty}</div>
+                  <div className='cartVal'>{cartQty?.qty}</div>
                 </>
               )}
-              <div className={styles.addToCartBtn}>
+              <div className='addToCartBtn'>
                 <Button
                   text={"add"}
                   type={"cartBtn"}
@@ -102,13 +119,6 @@ export default function Card({ salesData }: cardProps) {
           </div>
         </div>
       </div>
-      {showModal && (
-        <Modal
-          modalData={salesData}
-          showModal={showModal}
-          setShowModal={setShowModal}
-        />
-      )}
     </div>
   );
 }

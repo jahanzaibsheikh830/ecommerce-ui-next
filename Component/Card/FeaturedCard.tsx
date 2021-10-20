@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../Styles/Components/Cards/FeaturedCard.module.scss";
 import Image from "next/image";
 interface FeaturedCardProps {
   featuredData: {
@@ -17,8 +16,8 @@ export default function FeaturedCard({
 }: FeaturedCardProps) {
   return (
     <div>
-      <div className={discount ? styles.dicountMainCard : styles.mainCard}>
-        <div className={styles.image}>
+      <div className={discount ? "dicountMainCard" : "mainCard"}>
+        <div className='image'>
           <Image
             src={featuredData.image}
             alt='featued image'
@@ -26,15 +25,13 @@ export default function FeaturedCard({
             height={featuredData.price ? 280 : 200}
           />
         </div>
-        <div className={styles.title}>
+        <div className='title'>
           <h4>{featuredData.name}</h4>
         </div>
-        <div className={styles.price}>
+        <div className='price'>
           <span>{featuredData.price}</span>
 
-          {discount && (
-            <span className={styles.cutPrice}>{featuredData.price}</span>
-          )}
+          {discount && <span className='cutPrice'>{featuredData.price}</span>}
         </div>
       </div>
     </div>

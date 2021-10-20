@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "./Container";
-import styles from "../../Styles/Components/Shared/Footer.module.scss";
 import logo from "../../assests/logo.svg";
 import Image from "next/image";
 import googlePng from "../../assests/google.png";
@@ -14,18 +13,18 @@ import {
 } from "react-icons/ai";
 export default function Footer() {
   return (
-    <div className={styles.footerMain}>
+    <div className='footerMain'>
       <Container>
-        <div className={styles.footerCol4}>
-          <div className={styles.footerCol_1}>
+        <div className='footerCol4'>
+          <div className='footerCol_1'>
             <Image src={logo} alt='logo' />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
               libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat
               et lectus vel ut sollicitudin elit at amet.
             </p>
-            <div className={styles.googleAndAppStore}>
-              <div className={styles.googlePlay}>
+            <div className='googleAndAppStore'>
+              <div className='googlePlay'>
                 <div>
                   <Image
                     src={googlePng}
@@ -39,8 +38,8 @@ export default function Footer() {
                   <h4>Google Play</h4>
                 </div>
               </div>
-              <div className={styles.googlePlay}>
-                <div className={styles.appStoreImg}>
+              <div className='googlePlay'>
+                <div className='appStoreImg'>
                   <Image
                     src={appStore}
                     alt='app store logo'
@@ -55,7 +54,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className={styles.footerCol_2}>
+          <div className='footerCol_2'>
             <h4>About Us</h4>
             <ul>
               <li>Career</li>
@@ -65,7 +64,7 @@ export default function Footer() {
               <li>Privacy Policy</li>
             </ul>
           </div>
-          <div className={styles.footerCol_3}>
+          <div className='footerCol_3'>
             <h4>Customer Care</h4>
             <ul>
               <li>Help Center</li>
@@ -75,7 +74,7 @@ export default function Footer() {
               <li>Returns &amp; Refunds</li>
             </ul>
           </div>
-          <div className={styles.footerCol_4}>
+          <div className='footerCol_4'>
             <h4>Conatct Us</h4>
             <ul>
               <li>
@@ -84,7 +83,7 @@ export default function Footer() {
               <li>Email: uilib.help@gmail.com</li>
               <li>Phone: +1 1123 456 780</li>
             </ul>
-            <div className={styles.socialIcons}>
+            <div className='socialIcons'>
               <p>
                 <FaFacebookF />
               </p>

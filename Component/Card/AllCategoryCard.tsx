@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../../Styles/Components/Cards/AllCategory.module.scss";
 interface CategoryProps {
   categoryData?: {
     icon?: any;
@@ -10,7 +9,7 @@ interface CategoryProps {
 export default function AllCategoryCard({ categoryData }: CategoryProps) {
   return (
     <div>
-      <div className={styles.categoryMain}>
+      <div className='categoryMain'>
         <div>
           <Image src={categoryData?.icon} alt='image' width={50} height={50} />
         </div>

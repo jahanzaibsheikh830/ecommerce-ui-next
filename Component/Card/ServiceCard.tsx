@@ -1,17 +1,16 @@
 import React from "react";
 import Container from "../Shared/Container";
 import { serviceData } from "../../HelpersData/ServiceData.helper";
-import styles from "../../Styles/Components/Cards/ServiceCard.module.scss";
 export default function ServiceCard() {
   return (
-    <div className={styles.serviceCardMain}>
+    <div className='serviceCardMain'>
       <Container>
-        <div className={styles.serviceCard}>
+        <div className='serviceCard'>
           {serviceData.map((val, ind) => {
             return (
-              <div key={ind} className={styles.serviceCardContent}>
+              <div key={ind} className='serviceCardContent'>
                 <div>
-                  <div className={styles.serviceCardIcon}>{<val.icon />}</div>
+                  <div className='serviceCardIcon'>{<val.icon />}</div>
                   <div>
                     <h4>{val.title}</h4>
                   </div>

@@ -18,4 +18,19 @@ export const CategoryCardData = [
     name: "Watch",
     status: "3k order this week",
   },
+  {
+    image: categoryImg2,
+    name: "SunGlass",
+    status: "3k order this week",
+  },
+  {
+    image: categoryImg3,
+    name: "Headphone",
+    status: "3k order this week",
+  },
+  {
+    image: categoryImg1,
+    name: "Watch",
+    status: "3k order this week",
+  },
 ];

@@ -1,6 +1,5 @@
 import React from "react";
 import { featuredData } from "../../HelpersData/FeaturedData.helper";
-import styles from "../../Styles/Components/CardItems/FearturedCardItem.module.scss";
 import { GiSeaStar } from "react-icons/gi";
 
 import { IoMdArrowDropright } from "react-icons/io";
@@ -8,7 +7,7 @@ import FeaturedCard from "../Card/FeaturedCard";
 import ProductHeader from "./ProductHeader";
 export default function FeaturedCardItem() {
   return (
-    <div className={styles.Main}>
+    <div className='Main'>
       <ProductHeader
         title='Featured Brands'
         TitleIcon={GiSeaStar}
@@ -16,7 +15,7 @@ export default function FeaturedCardItem() {
         color='rgb(255, 145, 1)'
         LinkIcon={IoMdArrowDropright}
       />
-      <div className={styles.featuresMain}>
+      <div className='featuresMain'>
         {featuredData.map((val, ind) => {
           return <FeaturedCard featuredData={val} key={ind} featured />;
         })}

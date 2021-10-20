@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../Styles/Components/Shared/Button.module.scss";
 import { GrAdd } from "react-icons/gr";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 interface buttonProps {
@@ -27,34 +26,26 @@ export default function Button({
         type='button'
         className={
           type === "cartBtn"
-            ? styles.cartBtn
+            ? "cartBtn"
             : type === "sliderShopBtn"
-            ? styles.sliderShopBtn
+            ? "sliderShopBtn"
             : type === "categoryBtn"
-            ? styles.categoryBtn
+            ? "categoryBtn"
             : type === "statusBtn"
-            ? styles.statusBtn
+            ? "statusBtn"
             : type === "cartItemBtn"
-            ? styles.cartItemBtn
+            ? "cartItemBtn"
             : type === "cartShopBtn"
-            ? styles.cartShopBtn
+            ? "cartShopBtn"
             : type === "viewCartBtn"
-            ? styles.viewCartBtn
-            : styles.salesBtn
+            ? "viewCartBtn"
+            : "salesBtn"
         }
       >
         {text == "add" ? (
-          <AiOutlinePlus
-            size={12}
-            className={styles.addBtn}
-            color={"#d23f57"}
-          />
+          <AiOutlinePlus size={12} className='addBtn' color={"#d23f57"} />
         ) : text == "inc" ? (
-          <AiOutlineMinus
-            size={12}
-            className={styles.addBtn}
-            color={"#d23f57"}
-          />
+          <AiOutlineMinus size={12} className='addBtn' color={"#d23f57"} />
         ) : (
           text
         )}

@@ -1,0 +1,153 @@
+.profileMain {
+  background-color: #f6f9fc;
+  padding: 30px 0;
+  .profileMainCol {
+    display: flex;
+    .profileSideBar {
+      background-color: #fff;
+      border-radius: 8px;
+      color: rgb(43, 52, 69);
+      width: 280px;
+      box-shadow: 0px 1px 3px #e2e1f0;
+      padding-bottom: 30px;
+      h3 {
+        font-weight: 400;
+        line-height: 1.5;
+        color: rgb(125, 135, 156);
+        font-size: 12px;
+        text-transform: uppercase;
+        // margin-bottom: 15px;
+        padding: 26px 30px 1rem;
+      }
+      .sideBarCol {
+        .sideBarColItem {
+          //   position: relative;
+          //   align-items: center;
+          //   border-left: 4px solid rgb(210, 63, 87);
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          margin-bottom: 1.25rem;
+          :first-child {
+            display: flex;
+            align-items: center;
+            color: #525c5d;
+            font-size: 15px;
+            // color: rgb(210, 63, 87);
+            :first-child {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    .userProfileMain {
+      width: 880px;
+      margin-left: 20px;
+      .userInfoMain {
+        display: flex;
+        margin-top: 20px;
+        .userInfo {
+          width: 50%;
+          .userInfoDetail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0px 1px 3px #e2e1f0;
+            color: rgb(43, 52, 69);
+            border-radius: 8px;
+            padding: 17px 32px;
+            align-items: center;
+            :first-child {
+              display: flex;
+              align-items: center;
+            }
+            .userDetails {
+              margin-left: 10px;
+
+              .userName {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.5;
+              }
+              .userbalance {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.5;
+                color: rgb(125, 135, 156);
+                span {
+                  margin: 0px 0px 0px 4px;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: rgb(210, 63, 87);
+                }
+              }
+            }
+            .userBatch {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 1.5;
+              color: rgb(125, 135, 156);
+              letter-spacing: 0.2em;
+            }
+          }
+        }
+        .orderDetails {
+          display: flex;
+          .orderDetail {
+            background-color: #fff;
+            box-shadow: 0px 1px 3px #e2e1f0;
+            color: rgb(43, 52, 69);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 80px;
+            padding: 1rem 0.25rem;
+            margin-left: 28px;
+            .qty {
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 1.5;
+              color: rgb(210, 63, 87);
+            }
+            .qtyDesc {
+              font-size: 12px;
+              line-height: 1.5;
+              color: rgb(125, 135, 156);
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .userProfileInfoMain {
+      background-color: #fff;
+      color: rgb(43, 52, 69);
+      overflow: hidden;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0px 1px 3px #e2e1f0;
+      margin: 30px 0px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      .title {
+        font-size: 12px;
+        line-height: 1.5;
+        color: rgb(125, 135, 156);
+        margin-bottom: 4px;
+      }
+      .desc {
+        font-size: 16px;
+      }
+    }
+  }
+}

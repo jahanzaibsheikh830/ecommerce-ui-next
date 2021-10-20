@@ -1,0 +1,18 @@
+.profileBtn {
+  justify-content: center;
+  border: 0px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  padding: 6px 2rem;
+  border-radius: 4px;
+  color: #d23f57;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: #fce9ec;
+}
+.profileBtn:hover {
+  transition: 0.5s;
+  background-color: rgba(210, 63, 87, 0.04);
+}

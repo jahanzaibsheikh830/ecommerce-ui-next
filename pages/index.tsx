@@ -18,7 +18,10 @@ import Footer from "../Component/Shared/Footer";
 import BottomTab from "../Component/Shared/BottomNav";
 import Modal from "../Component/Shared/Modal";
 // import Dummy from "../components/carousel";
+import { useSelector, RootStateOrAny } from "react-redux";
 export default function Home() {
+  const modalState = useSelector((state: RootStateOrAny) => state.ModalReducer);
+  console.log("modalState", modalState);
   return (
     <div>
       <Head>
@@ -41,8 +44,13 @@ export default function Home() {
       <MoreData />
       <ServiceCard />
       <Footer />
-      {/* <Modal /> */}
       <BottomTab />
+      {modalState?.showModal && (
+        <Modal
+          modalData={modalState?.modalData}
+          showModal={modalState?.showModal}
+        />
+      )}
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../Styles/Components/Shared/BottomNav.module.scss";
 import {
   AiOutlineHome,
   AiOutlineShoppingCart,
@@ -14,8 +13,8 @@ export default function BottomNav() {
   );
   return (
     <div>
-      <div className={styles.bottomNavMain}>
-        <div className={styles.col4}>
+      <div className='bottomNavMain'>
+        <div className='col4'>
           <div>
             <AiOutlineHome size={20} color={"#515D60"} />
           </div>
@@ -23,7 +22,7 @@ export default function BottomNav() {
             <p>Home</p>
           </div>
         </div>
-        <div className={styles.col4}>
+        <div className='col4'>
           <div>
             <BsFillGridFill size={20} color={"#515D60"} />
           </div>
@@ -31,18 +30,18 @@ export default function BottomNav() {
             <p>Category</p>
           </div>
         </div>
-        <div className={styles.col4}>
+        <div className='col4'>
           <div>
             <AiOutlineShoppingCart size={20} color={"#515D60"} />
           </div>
           <div>
             <p>Cart</p>
           </div>
-          <div className={styles.cartQuantity}>
+          <div className='cartQuantity'>
             <span>{cartState.length}</span>
           </div>
         </div>
-        <div className={styles.col4}>
+        <div className='col4'>
           <div>
             <AiOutlineUser size={20} color={"#515D60"} />
           </div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AiOutlineShopping } from "react-icons/ai";
-import styles from "../../Styles/Components/Shared/Basket.module.scss";
 import Button from "./Button";
 import shoppingBag from "../../assests/shopping-bag.svg";
 import Image from "next/image";
@@ -14,21 +13,18 @@ export default function Basket({ showBasket, setShowBasket }) {
   const totalPrice = cartState.reduce((a, c) => a + c.qty * c.price, 0);
   const dispatch = useDispatch();
   return (
-    <div className={showBasket ? styles.basketMain : styles.basketMainNone}>
-      <div
-        className={styles.basket}
-        onClick={() => setShowBasket((prev) => !prev)}
-      >
-        <div className={styles.cartMain} onClick={() => setShowBasket(false)}>
-          <div className={styles.cartHeader}>
+    <div className={showBasket ? "basketMain" : "basketMainNone"}>
+      <div className='basket' onClick={() => setShowBasket((prev) => !prev)}>
+        <div className='cartMain' onClick={() => setShowBasket(false)}>
+          <div className='cartHeader'>
             <span>
               <AiOutlineShopping size={23} />
             </span>
             <span>{cartState?.length} Item</span>
           </div>
-          <hr className={styles.cartLine} />
+          <hr className='cartLine' />
           {cartState.length === 0 ? (
-            <div className={styles.ifNotItems}>
+            <div className='ifNotItems'>
               <div>
                 <Image
                   src={shoppingBag}
@@ -41,11 +37,11 @@ export default function Basket({ showBasket, setShowBasket }) {
             </div>
           ) : (
             <>
-              <div className={styles.cartItemsMain}>
+              <div className='cartItemsMain'>
                 {cartState.map((item, index) => {
                   return (
-                    <div className={styles.cartItems} key={index}>
-                      <div className={styles.itemBtns}>
+                    <div className='cartItems' key={index}>
+                      <div className='itemBtns'>
                         <span>
                           <Button
                             text={"add"}
@@ -65,22 +61,22 @@ export default function Basket({ showBasket, setShowBasket }) {
                           />
                         </span>
                       </div>
-                      <div className={styles.itemImg}>
-                        <Image
+                      <div className='itemImg'>
+                        {/* <Image
                           width={80}
                           height={80}
-                          src={item.image}
+                          src={item?.image}
                           alt='items image'
-                        />
+                        /> */}
                       </div>
-                      <div className={styles.itemDetails}>
+                      <div className='itemDetails'>
                         <h4>{item.title}</h4>
                         <span>
                           ${item.price} x {item.qty}
                         </span>
                         <p>${item.price * item.qty}</p>
                       </div>
-                      <div className={styles.itemCancel}>
+                      <div className='itemCancel'>
                         <MdClear
                           size={20}
                           onClick={() => removeItem(dispatch, item, cartState)}
@@ -90,7 +86,7 @@ export default function Basket({ showBasket, setShowBasket }) {
                   );
                 })}
               </div>
-              <div className={styles.btnMain}>
+              <div className='btnMain'>
                 <Button
                   text={`Checkout Now ($${totalPrice})`}
                   type='cartShopBtn'

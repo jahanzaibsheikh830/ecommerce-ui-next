@@ -1,0 +1,111 @@
+.singleProductMain {
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(630px, 1fr));
+  // gap: 25px;
+  display: flex;
+  background-color: #f6f9fc;
+  padding-bottom: 80px;
+  .singleProductLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 300px;
+    width: 40%;
+    margin-top: -35px;
+    .productImgView {
+      display: flex;
+      * {
+        height: 64px;
+        width: 64px;
+        min-width: 64px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(210, 63, 87);
+        margin-left: auto;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  .singleProductRight {
+    width: 60%;
+    margin-top: 50px;
+    .productTitle {
+      margin-bottom: 16px;
+      margin-top: 0px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.5;
+      text-transform: none;
+      white-space: normal;
+    }
+    .productBrandName {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      color: #525c5d;
+      span {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-left: 8px;
+      }
+    }
+    .productRating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      color: #525c5d;
+
+      span {
+        display: flex;
+        margin-left: 8px;
+        margin-right: 8px;
+        line-height: 1;
+      }
+    }
+    .productPrice {
+      margin-bottom: 4px;
+      margin-top: 0px;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1;
+      color: rgb(210, 63, 87);
+      text-transform: none;
+      white-space: normal;
+    }
+    .productStock {
+      color: #525c5d;
+      text-transform: capitalize;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .productSoldBy {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      margin-top: 40px;
+      color: #525c5d;
+      span {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-left: 8px;
+      }
+    }
+    .cartBtnMain {
+      display: flex;
+      :nth-child(2) {
+        margin: 0 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}

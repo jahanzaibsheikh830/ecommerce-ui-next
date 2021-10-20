@@ -1,0 +1,42 @@
+.main {
+  background-color: #f6f9fc;
+  padding: 60px 15px;
+  .salesCard {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    // gap: 25px;
+    // margin-top: 20px;
+    padding: 0 15px;
+  }
+  .slick-slider {
+    .slick-prev {
+      display: flex;
+      position: absolute;
+      background: #0f3460;
+      color: #fff;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      top: calc(50% - 0px);
+      left: -6px;
+      z-index: 99;
+    }
+    .slick-next {
+      display: flex;
+      position: absolute;
+      background: #0f3460;
+      color: #fff;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      top: calc(50% - 0px);
+      right: -6px;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+    .slick-next::before {
+      font-size: 10px;
+    }
+  }
+}

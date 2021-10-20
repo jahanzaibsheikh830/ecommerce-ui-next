@@ -1,7 +1,7 @@
 .main {
   background-color: #f6f9fc;
   padding: 0 15px 50px 15px;
-  .categoryCardMain {
+  .allCategoryCardMain {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 25px;

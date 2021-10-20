@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from "../../Styles/Components/Shared/Header.module.scss";
 import Container from "./Container";
 import { RiPhoneLine } from "react-icons/ri";
 import { AiOutlineMail } from "react-icons/ai";
@@ -15,7 +14,8 @@ import { BsFillGridFill } from "react-icons/bs";
 import Logo from "../../assests/logo.svg";
 import Basket from "./Basket";
 import { listData } from "../../HelpersData/CategoryList.helper";
-import { useSelector, RootStateOrAny } from "react-redux";
+import { useSelector, RootStateOrAny, useDispatch } from "react-redux";
+import { modal } from "../../ReduxStore/Actions/ModalAction";
 import Image from "next/image";
 import Modal from "./Modal";
 export default function Header() {
@@ -24,6 +24,7 @@ export default function Header() {
   const [showBasket, setShowBasket] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [height, setHeight] = useState(0);
+  const dispatch = useDispatch();
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
   );
@@ -51,13 +52,13 @@ export default function Header() {
 
   return (
     <div>
-      <div className={styles.mainHeader}>
+      <div className='mainHeader'>
         <Container>
-          <div className={styles.contactHeader}>
-            <div className={styles.logoNone}>
+          <div className='contactHeader'>
+            <div className='logoNone'>
               <Image src={Logo} alt='logo' height='28' />
             </div>
-            <div className={styles.contactHeaderLeft}>
+            <div className='contactHeaderLeft'>
               <div>
                 <div>
                   <RiPhoneLine size={20} />
@@ -73,12 +74,12 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className={styles.contactHeaderRight}>
+            <div className='contactHeaderRight'>
               <div>
-                <p className={styles.hover}>Theme FAQ&quot;s</p>
+                <p className='hover'>Theme FAQ&quot;s</p>
               </div>
               <div>
-                <p className={styles.hover}>Need Help?</p>
+                <p className='hover'>Need Help?</p>
               </div>
               <div>
                 <p>EN</p>
@@ -91,23 +92,23 @@ export default function Header() {
         </Container>
       </div>
       <div
-        className={`${styles.searchBarMain} 
-        ${height >= 40 && styles.searchBarMainFixed}
+        className={`${"searchBarMain"} 
+        ${height >= 5 && "searchBarMainFixed"}
         `}
       >
         <Container>
-          <div className={styles.searchBarHeader}>
-            <div className={styles.logoNone}>
+          <div className='searchBarHeader'>
+            <div className='logoNone'>
               <Image src={Logo} alt='logo' height='28' />
             </div>
-            <div className={styles.searchBar}>
-              <div className={styles.searchIconAndInput}>
-                <AiOutlineSearch size={20} className={styles.searchIcon} />
+            <div className='searchBar'>
+              <div className='searchIconAndInput'>
+                <AiOutlineSearch size={20} className='searchIcon' />
                 <div>
                   <input type='text' placeholder='Searching for' />
                 </div>
               </div>
-              <div className={styles.searchList}>
+              <div className='searchList'>
                 <button
                   type='button'
                   onClick={() => {
@@ -115,7 +116,7 @@ export default function Header() {
                   }}
                 >
                   All Categories
-                  <MdKeyboardArrowDown className={styles.arrow} size={17} />
+                  <MdKeyboardArrowDown className='arrow' size={17} />
                 </button>
                 <div style={{ display: `${state ? "block" : "none"}` }}>
                   <ul>
@@ -131,18 +132,25 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className={styles.carts}>
+            <div className='carts'>
               <div
-                className={styles.iconBackground}
-                onClick={() => setShowModal((prev) => !prev)}
+                className='iconBackground'
+                onClick={() =>
+                  dispatch(
+                    modal({
+                      showModal: true,
+                      isLoginModal: true,
+                    })
+                  )
+                }
               >
                 <FaRegUser size={17} />
               </div>
               <div
                 onClick={() => setShowBasket((prev) => !prev)}
-                className={styles.iconBackground}
+                className='iconBackground'
               >
-                <div className={styles.cartQuantity}>
+                <div className='cartQuantity'>
                   <span>{cartState.length}</span>
                 </div>
                 <AiOutlineShopping size={25} />
@@ -151,31 +159,31 @@ export default function Header() {
           </div>
         </Container>
       </div>
-      <div className={styles.navBar}>
+      <div className='navBar'>
         <Container>
-          <div className={styles.navBarMain}>
+          <div className='navBarMain'>
             <div
-              className={styles.categoryMain}
+              className='categoryMain'
               onClick={() => setShowList((prev) => !prev)}
             >
               <div>
                 <BsFillGridFill size={17} />
               </div>
-              <div className={styles.category}>
+              <div className='category'>
                 <div>
                   <p>Categories</p>
                 </div>
               </div>
               <div>
-                <IoIosArrowForward className={styles.categoryIcon} />
+                <IoIosArrowForward className='categoryIcon' />
               </div>
             </div>
-            <div className={styles.nav}>
+            <div className='nav'>
               <ul>
-                <li className={styles.homeMain}>
-                  <div className={styles.title}>Home</div>
-                  <div className={styles.navListOne}>
-                    <p className={styles.lisTitle}>Super Store</p>
+                <li className='homeMain'>
+                  <div className='title'>Home</div>
+                  <div className='navListOne'>
+                    <p className='lisTitle'>Super Store</p>
                     <div>
                       <p>Grocery</p>
                       <p>Shop V3</p>
@@ -183,9 +191,9 @@ export default function Header() {
                     </div>
                   </div>
                 </li>
-                <li className={styles.pagesMain}>
-                  <div className={styles.title}>Pages</div>
-                  <div className={styles.navListTwo}>
+                <li className='pagesMain'>
+                  <div className='title'>Pages</div>
+                  <div className='navListTwo'>
                     <div>
                       <p>
                         <span>Sale Page</span>
@@ -208,9 +216,9 @@ export default function Header() {
                     </div>
                   </div>
                 </li>
-                <li className={styles.accountsMain}>
-                  <div className={styles.title}>Accounts</div>
-                  <div className={styles.navListTwo}>
+                <li className='accountsMain'>
+                  <div className='title'>Accounts</div>
+                  <div className='navListTwo'>
                     <div>
                       <p>
                         <span>Orders</span>
@@ -242,9 +250,9 @@ export default function Header() {
                     </div>
                   </div>
                 </li>
-                <li className={styles.vendorMain}>
-                  <div className={styles.title}>Vendor Account</div>
-                  <div className={styles.navListTwo}>
+                <li className='vendorMain'>
+                  <div className='title'>Vendor Account</div>
+                  <div className='navListTwo'>
                     <div>
                       <p>
                         <span>Dashboard</span>
@@ -268,14 +276,12 @@ export default function Header() {
                   </div>
                 </li>
                 <li>
-                  <div className={styles.title}>Back to Demos</div>
+                  <div className='title'>Back to Demos</div>
                 </li>
               </ul>
             </div>
           </div>
-          <div
-            className={showlist ? styles.categoryList : styles.categoryListNone}
-          >
+          <div className={showlist ? "categoryList" : "categoryListNone"}>
             <ul>
               {listData.map((value, index) => {
                 return (
@@ -291,7 +297,7 @@ export default function Header() {
         </Container>
       </div>
       <Basket showBasket={showBasket} setShowBasket={setShowBasket} />
-      {showModal && <Modal setShowModal={setShowModal} login />}
+      {/* {showModal && <Modal showModal login />} */}
     </div>
   );
 }

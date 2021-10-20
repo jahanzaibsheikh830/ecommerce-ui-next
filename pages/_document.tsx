@@ -20,7 +20,10 @@ class MyDocument extends Document {
             type='text/css'
             href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
           />
-          <script></script>
+          <link
+            rel='stylesheet'
+            href='https://use.fontawesome.com/releases/v5.13.0/css/all.css'
+          />
         </Head>
         <body>
           <Main />

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../Styles/Components/Cards/RatingCard.module.scss";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import Image from "next/image";
 interface ratingDataProps {
@@ -19,8 +18,8 @@ export default function RatingCard({ ratingData }: ratingDataProps) {
   }, []);
   return (
     <div>
-      <div className={styles.ratingCard}>
-        <div className={styles.ratingCardImg}>
+      <div className='ratingCard'>
+        <div className='ratingCardImg'>
           <Image
             src={ratingData.image}
             alt='rating image'
@@ -30,18 +29,18 @@ export default function RatingCard({ ratingData }: ratingDataProps) {
             // height={110}
           />
         </div>
-        <div className={styles.ratings}>
-          <AiFillStar size={18} className={styles.filledRating} />
-          <AiFillStar size={18} className={styles.filledRating} />
-          <AiFillStar size={18} className={styles.filledRating} />
-          <AiFillStar size={18} className={styles.filledRating} />
-          <AiFillStar size={18} className={styles.filledRating} />
+        <div className='ratings'>
+          <AiFillStar size={18} className='filledRating' />
+          <AiFillStar size={18} className='filledRating' />
+          <AiFillStar size={18} className='filledRating' />
+          <AiFillStar size={18} className='filledRating' />
+          <AiFillStar size={18} className='filledRating' />
           <span>({ratingData?.ratings})</span>
         </div>
-        <div className={styles.title}>
+        <div className='title'>
           <p>{ratingData?.title}</p>
         </div>
-        <div className={styles.price}>
+        <div className='price'>
           <p>${ratingData?.price}</p>
         </div>
       </div>

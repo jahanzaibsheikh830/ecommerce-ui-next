@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 // // import { Col, Row } from "react-bootstrap";
 // // import { useRouter } from "next/router";
 // // import dynamic from "next/dynamic";
-// import styles from "../styles/components/carousel.module.scss";
+// import styles from "../styles/components/carousel.scss";
 // import { salesData } from "../helperData/sale.helper";
 // // const ReactViewer = dynamic(() => import("react-viewer"), { ssr: false });
 
@@ -79,15 +79,15 @@ import React, { useEffect, useRef, useState } from "react";
 // //   // }, [reset]);
 
 // //   return (
-// //     <div className={styles.flipCardMainContainer} dir={"ltr"}>
-// //       <div className={styles.flipCardDiv}>
-// //         <div className={`${styles.carousel_controls} ${styles.left}`}>
-// //           <span onClick={onLeft} className={styles.arrow_container}>
-// //             <i className={styles.left_arrow}></i>
+// //     <div className={flipCardMainContainer} dir={"ltr"}>
+// //       <div className={flipCardDiv}>
+// //         <div className={`${carousel_controls} ${left}`}>
+// //           <span onClick={onLeft} className={arrow_container}>
+// //             <i className={left_arrow}></i>
 // //           </span>
 // //         </div>
-// //         <div className={styles.flipCardContainerDiv}>
-// //           <div className={styles.flipCardContainer}>
+// //         <div className={flipCardContainerDiv}>
+// //           <div className={flipCardContainer}>
 // //             <div
 // //               style={{
 // //                 transform: `translateX(-${
@@ -95,30 +95,30 @@ import React, { useEffect, useRef, useState } from "react";
 // //                 }px)`,
 // //                 display: "flex",
 // //               }}
-// //               className={`${styles.flex_nowrap} ${styles.carouselContainer}`}
+// //               className={`${flex_nowrap} ${carouselContainer}`}
 // //             >
 // //               {salesData.map((value, index) => (
-// //                 <div key={index} className={styles.flip_card} ref={ref}>
-// //                   <div className={styles.flip_card_inner}>
-// //                     <div className={styles.flip_card_front}>
+// //                 <div key={index} className={flip_card} ref={ref}>
+// //                   <div className={flip_card_inner}>
+// //                     <div className={flip_card_front}>
 // //                       <Image
 // //                         objectFit='cover'
 // //                         src={value.image}
 // //                         alt='Avatar'
-// //                         className={styles.flip_card_image}
+// //                         className={flip_card_image}
 // //                         // onClick={() => setImageViewer(index)}
 // //                       />
 // //                     </div>
 // //                   </div>
-// //                   <p className={styles.carousel_text}>{value?.title}</p>
+// //                   <p className={carousel_text}>{value?.title}</p>
 // //                 </div>
 // //               ))}
 // //             </div>
 // //           </div>
 // //         </div>
-// //         <div className={`${styles.carousel_controls} ${styles.right}`}>
-// //           <span onClick={onRight} className={styles.arrow_container}>
-// //             <i className={styles.right_arrow}></i>
+// //         <div className={`${carousel_controls} ${right}`}>
+// //           <span onClick={onRight} className={arrow_container}>
+// //             <i className={right_arrow}></i>
 // //           </span>
 // //         </div>
 // //       </div>
@@ -137,7 +137,7 @@ import React, { useEffect, useRef, useState } from "react";
 // // export default Carousel;
 // import React, { useState, useRef } from "react";
 // // import { carouselItem } from "./Carousel.helper";
-// // import styles from "./HomeCarousel.module.scss";
+// // import styles from "./HomeCarousel.scss";
 // import Image from "next/image";
 // // import CustomButton from "../CustomButton/CustomButton";
 // const HomeCarousel = () => {
@@ -154,13 +154,13 @@ import React, { useEffect, useRef, useState } from "react";
 //     setActiveIndex((prev) => (prev < carouselDataLength - 1 ? ++prev : 0));
 //   };
 //   return (
-//     <div className={styles.carouselMain}>
-//       <div className={styles.carouselDiv}>
+//     <div className={carouselMain}>
+//       <div className={carouselDiv}>
 //         {salesData?.map((item, index) => {
 //           return (
-//             <div className={styles.carouselMap} key={index}>
+//             <div className={carouselMap} key={index}>
 //               <div
-//                 className={styles.carouselWrapper}
+//                 className={carouselWrapper}
 //                 style={{
 //                   transform: `translateX(-${
 //                     ref?.current?.clientWidth * activeIndex
@@ -172,8 +172,8 @@ import React, { useEffect, useRef, useState } from "react";
 //                 }}
 //                 ref={ref}
 //               >
-//                 <div className={styles.carouselItemMain}>
-//                   <div className={styles.carouselItemright}>
+//                 <div className={carouselItemMain}>
+//                   <div className={carouselItemright}>
 //                     <h1>{item?.title}</h1>
 //                     {/* <p>{item?.paragraph}</p>
 //                     <CustomButton text='Shop Now' link={item?.buttonLink} /> */}
@@ -192,7 +192,7 @@ import React, { useEffect, useRef, useState } from "react";
 //           );
 //         })}
 //       </div>
-//       <div className={styles.controlBtn}>
+//       <div className={controlBtn}>
 //         <span onClick={onLeft}>&#8592;</span>
 //         <span onClick={onRight}>&#8594;</span>
 //       </div>
