@@ -166,6 +166,7 @@
       .userProfileMain {
         width: auto;
         padding: 0 15px;
+        margin-left: 0;
         .userInfoMain {
           .userInfo {
             .userInfoDetail {
@@ -196,6 +197,7 @@
   .profileMain {
     .profileMainCol {
       .userProfileMain {
+        margin-left: 0;
         .userInfoMain {
           flex-direction: column;
           .userInfo {
@@ -214,7 +216,7 @@
             .orderDetail {
               width: 48%;
               margin-bottom: 30px;
-              margin-left: 10px;
+              margin-left: 0px;
             }
           }
         }

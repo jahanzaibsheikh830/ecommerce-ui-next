@@ -3,6 +3,7 @@ import { AiOutlineShopping, AiOutlineHeart } from "react-icons/ai";
 import { GiHeadphones } from "react-icons/gi";
 import { FaUserAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { MdPayment } from "react-icons/md";
+import Link from "next/link";
 export default function ProfileSideBar() {
   return (
     <div>
@@ -44,7 +45,9 @@ export default function ProfileSideBar() {
               <span>
                 <FaUserAlt color='rgb(125, 135, 156)' size='13' />
               </span>
-              <span>Profile info</span>
+              <span>
+                <Link href='/profile/order'>Profile info</Link>{" "}
+              </span>
             </div>
             <span>3</span>
           </div>

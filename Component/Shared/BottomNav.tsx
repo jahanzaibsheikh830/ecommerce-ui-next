@@ -6,7 +6,7 @@ import {
 } from "react-icons/ai";
 import { BsFillGridFill } from "react-icons/bs";
 import { useSelector, RootStateOrAny } from "react-redux";
-
+import Link from "next/link";
 export default function BottomNav() {
   const cartState = useSelector(
     (state: RootStateOrAny) => state?.CartReducers?.cartItems
@@ -46,7 +46,11 @@ export default function BottomNav() {
             <AiOutlineUser size={20} color={"#515D60"} />
           </div>
           <div>
-            <p>Account</p>
+            <p>
+              <Link href='/profile' passHref>
+                Account
+              </Link>{" "}
+            </p>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function Modal({ modalData, showModal, login }: modalProps) {
   const modalState = useSelector(
     (state: RootStateOrAny) => state?.ModalReducer
   );
-  console.log("modalState md", modalState.isLoginModal);
+  console.log("modalState md", modalState);
   const dispatch = useDispatch();
   const cartQty = cartState.find((itm) => itm.id === modalData?.id && itm.qty);
 
@@ -50,13 +50,22 @@ export default function Modal({ modalData, showModal, login }: modalProps) {
           onClick={() =>
             dispatch(
               modal({
-                showModal: true,
+                showModal: false,
               })
             )
           }
         >
           {modalState?.isLoginModal ? (
-            <div className='modalLogin'>
+            <div
+              className='modalLogin'
+              onClick={() =>
+                dispatch(
+                  modal({
+                    showModal: true,
+                  })
+                )
+              }
+            >
               <div>
                 <h3>Welcome To Ecommerce</h3>
                 <p>Log in with email &amp; password</p>
