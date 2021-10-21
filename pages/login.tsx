@@ -9,25 +9,17 @@ export default function Signup() {
         <div className='signupMain'>
           <div className='signup'>
             <div>
-              <h3>Create Your Account</h3>
-              <p>Please fill all fields to continue</p>
+              <h3>Welcome To Ecommerce</h3>
+              <p>Log in with email &amp; password</p>
               <div>
                 <form>
                   <div className='signupForm'>
-                    <div>
-                      <label>Full Name</label>
-                      <input type='text' placeholder='Dean John' />
-                    </div>
                     <div>
                       <label>Email or Phone Number</label>
                       <input type='text' placeholder='example@mail.com' />
                     </div>
                     <div>
                       <label>Password</label>
-                      <input type='password' placeholder='*********' />
-                    </div>
-                    <div>
-                      <label>Retype Password</label>
                       <input type='password' placeholder='*********' />
                     </div>
                     <div className='loginBtn'>
@@ -59,8 +51,8 @@ export default function Signup() {
                     <p>
                       Don’t have account?{" "}
                       <span>
-                        <Link href='/login' passHref>
-                          Login
+                        <Link href='/signup' passHref>
+                          Signup
                         </Link>{" "}
                       </span>{" "}
                     </p>

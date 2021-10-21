@@ -4,6 +4,7 @@ import SliderItem from "../CardItems/SliderItem";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Container from "./Container";
 export default function SliderMain() {
   const settings = {
     dots: true,
@@ -11,23 +12,21 @@ export default function SliderMain() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0,
+    arrows: false,
     // responsive: [
     //   {
     //     breakpoint: 1024,
     //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
     //       infinite: true,
-    //       dots: true,
     //     },
     //   },
     //   {
     //     breakpoint: 600,
     //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2,
-    //       initialSlide: 2,
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
     //     },
     //   },
     //   {
@@ -42,11 +41,13 @@ export default function SliderMain() {
   return (
     <div>
       <div className='slickSlider'>
-        <Slider {...settings}>
-          {slidesData.map((val, index) => {
-            return <SliderItem slideData={val} key={index} />;
-          })}
-        </Slider>
+        <Container>
+          <Slider {...settings}>
+            {slidesData.map((val, index) => {
+              return <SliderItem slideData={val} key={index} />;
+            })}
+          </Slider>
+        </Container>
       </div>
     </div>
   );

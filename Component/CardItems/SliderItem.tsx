@@ -12,21 +12,21 @@ interface slideDataProps {
 
 export default function sliderItem({ slideData }: slideDataProps) {
   return (
-    <div style={{ padding: "60px 0" }}>
-      <Container>
-        <div className='sliderMain'>
-          <div className='sliderContent'>
-            <div>
-              <h2>{slideData?.title}</h2>
-              <p>{slideData?.description}</p>
-              {slideData?.button}
-            </div>
-          </div>
+    <div>
+      {/* <Container> */}
+      <div className='sliderMain'>
+        <div className='sliderContent'>
           <div>
-            <img src={slideData?.image?.src} alt='slider images' />
+            <h2>{slideData?.title}</h2>
+            <p>{slideData?.description}</p>
+            {slideData?.button}
           </div>
         </div>
-      </Container>
+        <div>
+          <img src={slideData?.image?.src} alt='slider images' />
+        </div>
+      </div>
+      {/* </Container> */}
     </div>
   );
 }

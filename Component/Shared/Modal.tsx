@@ -9,6 +9,7 @@ import { incItem, decItem } from "../../Libs/HelpersFunction";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { modal } from "../../ReduxStore/Actions/ModalAction";
 import SocialButton from "./SocialButton";
+import Link from "next/link";
 interface modalProps {
   modalData?: {
     id: string;
@@ -97,7 +98,12 @@ export default function Modal({ modalData, showModal, login }: modalProps) {
                     </div>
                     <div className='linkRoute'>
                       <p>
-                        Don’t have account? <span>Sign Up</span>{" "}
+                        Don’t have account?{" "}
+                        <span>
+                          <Link href='/signup' passHref>
+                            Signup
+                          </Link>{" "}
+                        </span>{" "}
                       </p>
                     </div>
                     <div className='modalBottom'>

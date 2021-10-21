@@ -49,6 +49,7 @@
       .userInfoMain {
         display: flex;
         margin-top: 20px;
+        justify-content: space-between;
         .userInfo {
           width: 50%;
           .userInfoDetail {
@@ -102,6 +103,8 @@
         }
         .orderDetails {
           display: flex;
+          width: 50%;
+          max-width: 100%;
           .orderDetail {
             background-color: #fff;
             box-shadow: 0px 1px 3px #e2e1f0;
@@ -147,6 +150,107 @@
       }
       .desc {
         font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .profileMain {
+    .profileMainCol {
+      flex-direction: column;
+      .profileSideBar {
+        width: auto;
+        margin: 0 15px 20px 15px;
+      }
+      .userProfileMain {
+        width: auto;
+        padding: 0 15px;
+        .userInfoMain {
+          .userInfo {
+            .userInfoDetail {
+              width: 560px;
+              max-width: 100%;
+              height: 190px;
+            }
+          }
+          .orderDetails {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .orderDetail {
+              width: 46%;
+              margin-bottom: 30px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      .userProfileInfoMain {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .profileMain {
+    .profileMainCol {
+      .userProfileMain {
+        .userInfoMain {
+          flex-direction: column;
+          .userInfo {
+            width: 100%;
+            .userInfoDetail {
+              width: auto;
+              max-width: 100%;
+              height: auto;
+              margin-bottom: 20px;
+            }
+          }
+          .orderDetails {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            .orderDetail {
+              width: 48%;
+              margin-bottom: 30px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      .userProfileInfoMain {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .profileMain {
+    .profileMainCol {
+      .userProfileMain {
+        margin: 0;
+        .userInfoMain {
+          .orderDetails {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            .orderDetail {
+              width: 45%;
+              margin-bottom: 30px;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .userProfileInfoMain {
+        margin-left: 15px;
+        margin-right: 15px;
+        flex-wrap: wrap;
+        div {
+          padding-bottom: 10px;
+        }
       }
     }
   }

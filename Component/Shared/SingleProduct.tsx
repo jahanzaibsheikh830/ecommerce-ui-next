@@ -5,6 +5,7 @@ import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
 import { incItem, decItem } from "../../Libs/HelpersFunction";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import im from "../../assests/bikeImg2.webp";
+import Container from "./Container";
 export default function SingleProduct({ modalData }) {
   const dispatch = useDispatch();
   const cartState = useSelector(
@@ -13,9 +14,9 @@ export default function SingleProduct({ modalData }) {
   const cartQty = cartState.find((itm) => itm.id === modalData?.id && itm.qty);
   console.log(modalData);
   return (
-    <div className=''>
-      <div className=''>
-        <div className='singleProductMain'>
+    <div className='singleProductMain'>
+      <Container>
+        <div className='singleProduct'>
           <div className='singleProductLeft'>
             <div className='productImg'>
               <Image src={im} alt={"fsfsf"} width={400} height={400} />
@@ -83,7 +84,7 @@ export default function SingleProduct({ modalData }) {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
