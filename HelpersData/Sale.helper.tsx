@@ -7,7 +7,7 @@ export const salesData = [
   {
     id: "sales1",
     image: shoe,
-    title: "50% Off For Your First ",
+    title: "50% Off For Your First Shopping watch ",
     price: 250,
   },
   {

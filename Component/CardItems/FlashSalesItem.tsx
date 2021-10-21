@@ -58,7 +58,7 @@ export default function salesItem() {
           {salesData.map((val, i) => {
             return (
               <div key={i} className='salesCard'>
-                <Card salesData={val} />
+                <Card salesData={val} flashSales />
               </div>
             );
           })}

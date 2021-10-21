@@ -20,8 +20,9 @@ interface cardProps {
     title: string;
     price: number;
   };
+  flashSales?: boolean;
 }
-export default function Card({ salesData }: cardProps) {
+export default function Card({ salesData, flashSales }: cardProps) {
   const [showModal, setShowModal] = useState(false);
   const [heartFill, setHeartFill] = useState<boolean>(false);
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ export default function Card({ salesData }: cardProps) {
 
   return (
     <div className='cardContainer'>
-      <div className='card'>
+      <div className={`card ${flashSales && "cardShadow"} `}>
         <div>
           <div className='cardContentHeader'>
             <div>
