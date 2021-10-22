@@ -1,0 +1,107 @@
+.ordersMain {
+  width: 75%;
+  margin-left: 20px;
+  .ordersMainHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+    p {
+      margin: 0px 6px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: rgb(125, 135, 156);
+      cursor: pointer;
+    }
+  }
+  .orders,
+  .addresses {
+    .ordersDetail,
+    .addressesDetail {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(255, 255, 255);
+      color: rgb(43, 52, 69);
+      overflow: hidden;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding: 8px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border-radius: 10px;
+      text-transform: capitalize;
+      box-shadow: 0px 1px 3px #e2e1f0;
+      cursor: pointer;
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 6px;
+      }
+      .status,
+      .address {
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: left;
+        }
+        .pending {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 24px;
+          border-radius: 16px;
+          padding: 10px 15px;
+          font-size: 12px;
+          color: rgb(12, 14, 48);
+          background-color: rgb(232, 232, 238);
+        }
+        .delivered {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 24px;
+          border-radius: 16px;
+          padding: 10px 15px;
+          font-size: 12px;
+          color: rgb(11, 119, 36);
+          background-color: rgb(231, 249, 237);
+        }
+        .cancelled {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 24px;
+          border-radius: 16px;
+          padding: 10px 15px;
+          font-size: 12px;
+          color: rgb(255, 41, 41);
+          background-color: rgb(255, 234, 234);
+        }
+      }
+      .date,
+      .phone {
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: left;
+        }
+      }
+      .total {
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: left;
+        }
+      }
+      .editIcon {
+        margin-right: 10px;
+      }
+    }
+  }
+}

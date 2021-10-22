@@ -71,10 +71,10 @@ export default function Card({ salesData, flashSales }: cardProps) {
             <Link
               passHref
               href={{
-                pathname: `product/[index]`,
+                pathname: `/product/[index]`,
                 query: salesData,
               }}
-              as={`product/${salesData?.id}`}
+              as={`/product/${salesData?.id}`}
             >
               <Image src={salesData?.image} alt={"sales product image"} />
             </Link>

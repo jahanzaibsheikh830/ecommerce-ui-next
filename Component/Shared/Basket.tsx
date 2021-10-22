@@ -62,12 +62,12 @@ export default function Basket({ showBasket, setShowBasket }) {
                         </span>
                       </div>
                       <div className='itemImg'>
-                        {/* <Image
+                        <Image
                           width={80}
                           height={80}
-                          src={item?.image}
+                          src={item?.image ? item?.image : shoppingBag}
                           alt='items image'
-                        /> */}
+                        />
                       </div>
                       <div className='itemDetails'>
                         <h4>{item.title}</h4>

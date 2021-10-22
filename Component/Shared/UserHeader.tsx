@@ -1,15 +1,24 @@
 import React from "react";
 import UserProfBtn from "./UserProfBtn";
-export default function UserHeader({ title, Icon, buttonText }) {
+interface UserProp {
+  title?: string;
+  Icon?: any;
+  buttonText?: string;
+  iconSize?: string;
+}
+export default function UserHeader({
+  title,
+  Icon,
+  buttonText,
+  iconSize,
+}: UserProp) {
   return (
     <div className='userheader'>
       <div>
-        <span>{<Icon size={15} color='rgb(210, 63, 87)' />}</span>
+        <span>{<Icon size={iconSize} color='rgb(210, 63, 87)' />}</span>
         <h3>{title}</h3>
       </div>
-      <div>
-        <UserProfBtn text={buttonText} />
-      </div>
+      <div>{buttonText && <UserProfBtn text={buttonText} />}</div>
     </div>
   );
 }

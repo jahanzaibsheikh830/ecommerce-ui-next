@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import img from "../assests/bikeImg2.webp";
 import Image from "next/image";
 import Button from "./Button";
@@ -10,6 +10,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { modal } from "../../ReduxStore/Actions/ModalAction";
 import SocialButton from "./SocialButton";
 import Link from "next/link";
+import UseOutsideClick from "../../Hooks/UseOutsideClick";
 interface modalProps {
   modalData?: {
     id: string;
@@ -27,45 +28,24 @@ export default function Modal({ modalData, showModal, login }: modalProps) {
   const modalState = useSelector(
     (state: RootStateOrAny) => state?.ModalReducer
   );
-  console.log("modalState md", modalState);
   const dispatch = useDispatch();
+  const modalRef = useRef(null);
   const cartQty = cartState.find((itm) => itm.id === modalData?.id && itm.qty);
-
+  UseOutsideClick(modalRef, () => {
+    dispatch(
+      modal({
+        showModal: false,
+        modalData: {},
+        isLoginModal: false,
+      })
+    );
+  });
   return (
-    <div
-      className='mainContainerModal'
-      onClick={() =>
-        dispatch(
-          modal({
-            showModal: false,
-            modalData: {},
-            isLoginModal: false,
-          })
-        )
-      }
-    >
+    <div className='mainContainerModal'>
       <div className='modalMain'>
-        <div
-          className='modal'
-          onClick={() =>
-            dispatch(
-              modal({
-                showModal: false,
-              })
-            )
-          }
-        >
+        <div className='modal' ref={modalRef}>
           {modalState?.isLoginModal ? (
-            <div
-              className='modalLogin'
-              onClick={() =>
-                dispatch(
-                  modal({
-                    showModal: true,
-                  })
-                )
-              }
-            >
+            <div className='modalLogin'>
               <div>
                 <h3>Welcome To Ecommerce</h3>
                 <p>Log in with email &amp; password</p>
@@ -167,33 +147,42 @@ export default function Modal({ modalData, showModal, login }: modalProps) {
                 </p>
                 <h4 className='modalPrice'>${modalData?.price}</h4>
                 <p className='modalStock'>stock available</p>
-                {(cartQty?.qty[0] && cartQty == 0) || cartQty == undefined ? (
-                  <Button
-                    text='Add to Cart'
-                    type='sliderShopBtn'
-                    onClick={() => incItem(dispatch, modalData, cartState)}
-                  />
-                ) : (
-                  <div className='cartBtnMain'>
+
+                <div className='cartBtnMain'>
+                  {(cartQty?.qty[0] && cartQty == 0) || cartQty == undefined ? (
                     <div>
                       <Button
-                        text={"inc"}
-                        type={"cartBtn"}
-                        color={"#d23f57"}
-                        onClick={() => decItem(dispatch, modalData, cartState)}
-                      />
-                    </div>
-                    <div>{cartQty?.qty}</div>
-                    <div>
-                      <Button
-                        text={"add"}
-                        type={"cartBtn"}
-                        color={"#d23f57"}
+                        text='Add to Cart'
+                        type='sliderShopBtn'
                         onClick={() => incItem(dispatch, modalData, cartState)}
                       />
                     </div>
-                  </div>
-                )}
+                  ) : (
+                    <>
+                      <div>
+                        <Button
+                          text={"inc"}
+                          type={"cartBtn"}
+                          color={"#d23f57"}
+                          onClick={() =>
+                            decItem(dispatch, modalData, cartState)
+                          }
+                        />
+                      </div>
+                      <div>{cartQty?.qty}</div>
+                      <div>
+                        <Button
+                          text={"add"}
+                          type={"cartBtn"}
+                          color={"#d23f57"}
+                          onClick={() =>
+                            incItem(dispatch, modalData, cartState)
+                          }
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
                 <p className='modalSoldBy'>
                   Sold By:<span>Mobile Store</span>
                 </p>

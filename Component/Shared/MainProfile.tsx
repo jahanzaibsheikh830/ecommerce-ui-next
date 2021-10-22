@@ -11,6 +11,7 @@ export default function MainProfile() {
           buttonText='Edit Profile'
           title='My Profile'
           Icon={FaUserAlt}
+          iconSize='15'
         />
         <div className='userInfoMain'>
           <div className='userInfo'>

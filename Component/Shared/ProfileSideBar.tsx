@@ -15,7 +15,9 @@ export default function ProfileSideBar() {
               <span>
                 <AiOutlineShopping color='rgb(125, 135, 156)' size='20' />
               </span>
-              <span>Orders</span>
+              <span>
+                <Link href='/dashboard/orders'>Orders</Link>
+              </span>
             </div>
             <span>5</span>
           </div>
@@ -24,7 +26,9 @@ export default function ProfileSideBar() {
               <span>
                 <AiOutlineHeart color='rgb(125, 135, 156)' size='20' />
               </span>
-              <span>Wishlist</span>
+              <span>
+                <Link href='/dashboard/wishlist'>Wishlist</Link>
+              </span>
             </div>
             <span>19</span>
           </div>
@@ -33,7 +37,9 @@ export default function ProfileSideBar() {
               <span>
                 <GiHeadphones color='rgb(125, 135, 156)' size='20' />
               </span>
-              <span>Support Tickets</span>
+              <span>
+                <Link href='/dashboard/support-tickets'>Support Tickets</Link>
+              </span>
             </div>
             <span>1</span>
           </div>
@@ -46,7 +52,7 @@ export default function ProfileSideBar() {
                 <FaUserAlt color='rgb(125, 135, 156)' size='13' />
               </span>
               <span>
-                <Link href='/profile/order'>Profile info</Link>{" "}
+                <Link href='/dashboard/profile'>Profile info</Link>{" "}
               </span>
             </div>
             <span>3</span>
@@ -56,7 +62,10 @@ export default function ProfileSideBar() {
               <span>
                 <FaMapMarkerAlt color='rgb(125, 135, 156)' size='15' />
               </span>
-              <span>Addressess</span>
+              <span>
+                {" "}
+                <Link href='/dashboard/addresses'>Addresses</Link>{" "}
+              </span>
             </div>
             <span>16</span>
           </div>
@@ -65,7 +74,9 @@ export default function ProfileSideBar() {
               <span>
                 <MdPayment color='rgb(125, 135, 156)' size='20' />
               </span>
-              <span>Payment Method</span>
+              <span>
+                <Link href='/dashboard/payment-method'>Payment Method</Link>
+              </span>
             </div>
             <span>4</span>
           </div>

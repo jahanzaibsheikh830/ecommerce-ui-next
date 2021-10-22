@@ -26,6 +26,7 @@
 @import "../Components/Shared/SingleProduct.scss";
 @import "../Components/Shared/Slider.scss";
 @import "../Components/Shared/SocialButton.scss";
+@import "../Components/Shared/OrdersandAddress.scss";
 @import "../Components/Shared/UserHeader.scss";
 @import "../Components/Shared/UserProfBtn.scss";
 @import "../Pages/UserProfile.scss";
@@ -46,5 +47,9 @@ a {
 * {
   box-sizing: border-box;
 }
-.owl-carousel {
+.wishList {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
 }

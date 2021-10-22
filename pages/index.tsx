@@ -21,7 +21,6 @@ import Modal from "../Component/Shared/Modal";
 import { useSelector, RootStateOrAny } from "react-redux";
 export default function Home() {
   const modalState = useSelector((state: RootStateOrAny) => state.ModalReducer);
-  console.log("modalState", modalState);
   return (
     <div>
       <Head>
