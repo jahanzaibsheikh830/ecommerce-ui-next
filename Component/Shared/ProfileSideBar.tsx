@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineShopping, AiOutlineHeart } from "react-icons/ai";
 import { GiHeadphones } from "react-icons/gi";
 import { FaUserAlt, FaMapMarkerAlt } from "react-icons/fa";
@@ -7,11 +7,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { UseWindowSize } from "../../Hooks/UseWidth";
+import UseOutsideClick from "../../Hooks/UseOutsideClick";
 export default function ProfileSideBar() {
   const [showSideBar, setShowSideBar] = useState(false);
   const router = useRouter();
   const path = router.query.index;
   const customWindow = UseWindowSize();
+  const myRef = useRef(null);
+  UseOutsideClick(myRef, () => {
+    setShowSideBar((prev) => !prev);
+  });
   useEffect(() => {
     if (customWindow?.width > 900) {
       setShowSideBar(false);
@@ -22,7 +27,8 @@ export default function ProfileSideBar() {
       {customWindow?.width < 900 && (
         <div
           className='hamburger'
-          onClick={() => setShowSideBar((prev) => !prev)}
+          ref={myRef}
+          onClick={() => setShowSideBar(true)}
         >
           <GiHamburgerMenu
             color='rgb(15, 52, 96);'
@@ -32,7 +38,6 @@ export default function ProfileSideBar() {
         </div>
       )}
       <div
-        onClick={() => setShowSideBar((prev) => !prev)}
         className={`${
           !showSideBar && customWindow?.width > 900
             ? "profileSideBarMainContainer"
@@ -47,7 +52,6 @@ export default function ProfileSideBar() {
               <h3>Dashboard</h3>
               <Link href='/dashboard/orders' passHref>
                 <div
-                  onClick={() => setShowSideBar((prev) => !prev)}
                   className={`${"sideBarColItem"} ${
                     path === "orders" && "active"
                   }`}
