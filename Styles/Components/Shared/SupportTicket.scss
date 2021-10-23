@@ -1,0 +1,75 @@
+.supportTicketsMain {
+  width: 900px;
+  margin-left: 20px;
+  .supportTickets {
+    background-color: rgb(255, 255, 255);
+    color: rgb(43, 52, 69);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 15px 24px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px #e2e1f0;
+    h4 {
+      color: #838383;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+    .supportTicketsRow2 {
+      display: flex;
+      flex-wrap: wrap;
+      .status {
+        font-size: 0.8125rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        padding: 10px 15px;
+        height: 26px;
+        background-color: rgb(252, 233, 236);
+        color: rgb(210, 63, 87);
+        margin: 6px;
+        text-transform: capitalize;
+      }
+      .issueStatus {
+        font-size: 0.8125rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        padding: 10px 15px;
+        height: 26px;
+        background-color: rgb(231, 249, 237);
+        color: rgb(51, 208, 103);
+        margin: 6px;
+        text-transform: capitalize;
+      }
+      .date {
+        line-height: 1.5;
+        margin: 6px;
+        color: rgb(125, 135, 156);
+        text-transform: capitalize;
+      }
+      .prob {
+        line-height: 1.5;
+        margin: 6px;
+        color: rgb(125, 135, 156);
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .supportTicketsMain {
+    width: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+    max-width: 100%;
+  }
+}

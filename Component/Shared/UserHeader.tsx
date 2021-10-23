@@ -1,5 +1,6 @@
 import React from "react";
 import UserProfBtn from "./UserProfBtn";
+import { GiHamburgerMenu } from "react-icons/gi";
 interface UserProp {
   title?: string;
   Icon?: any;
@@ -18,7 +19,9 @@ export default function UserHeader({
         <span>{<Icon size={iconSize} color='rgb(210, 63, 87)' />}</span>
         <h3>{title}</h3>
       </div>
-      <div>{buttonText && <UserProfBtn text={buttonText} />}</div>
+      <div className='button'>
+        {buttonText && <UserProfBtn text={buttonText} />}
+      </div>
     </div>
   );
 }

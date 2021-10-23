@@ -47,7 +47,7 @@ export default function BottomNav() {
           </div>
           <div>
             <p>
-              <Link href='/profile' passHref>
+              <Link href='/dashboard/profile' passHref>
                 Account
               </Link>{" "}
             </p>

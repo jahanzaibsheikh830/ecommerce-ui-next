@@ -105,3 +105,11 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .ordersMain {
+    width: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}

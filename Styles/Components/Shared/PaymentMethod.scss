@@ -1,0 +1,46 @@
+.paymentMain {
+  margin-left: 20px;
+  width: 900px;
+  .payment {
+    background-color: rgb(255, 255, 255);
+    color: rgb(43, 52, 69);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 12px 18px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px #e2e1f0;
+
+    .paymentImage {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+    }
+    .action {
+      margin-right: 70px;
+      .editIcon {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .paymentMain {
+    width: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+    max-width: 100%;
+  }
+}
